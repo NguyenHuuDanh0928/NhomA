@@ -1,0 +1,27 @@
+1. Mục đích của dự án
+Phần mềm quản lý dịch vụ thú y cá Koi đã được phát minh để hoàn thành các mục tiêu sau:
+Tự động hóa quy trình: Quản lý một cách có hệ thống liên tục dịch vụ thú y toàn diện, bao gồm sắp xếp cuộc hẹn, tư vấn, can thiệp điều trị và đánh giá chất lượng dịch vụ. 
+Tối ưu hóa quản lý khách hàng và nhân viên: Để nâng cao hiệu quả của việc giám sát các cuộc hẹn, xử lý khách hàng và lịch trình làm việc của nhân viên. Nâng cao trải nghiệm khách hàng.
+-Để tạo điều kiện thuận lợi cho một quy trình liền mạch để khách hàng sắp xếp các cuộc hẹn, quản lý thông tin thú y và cung cấp phản hồi liên quan đến các dịch vụ từ bất kỳ địa điểm nào. 
+-Cung cấp báo cáo và bảng điều khiển: Cung cấp cho ban quản lý các công cụ trực quan để theo dõi tiến độ hoạt động và dữ liệu thống kê cần thiết.
+2. Phạm vi và cách sử dụng 
+Khách hàng: Có khả năng sử dụng phần mềm để lên lịch hẹn, theo dõi việc xử lý cá Koi và cung cấp phản hồi về chất lượng dịch vụ. 
+Nhân viên và bác sĩ thú y: Tham gia với phần mềm để quản lý lịch làm việc, cập nhật thông tin liên quan đến việc chăm sóc và điều trị cá Koi và theo dõi phản hồi của khách hàng. 
+Quản lý trung tâm: Giám sát thông tin toàn diện về dịch vụ, tình trạng khách hàng, lịch làm việc của nhân viên và có quyền truy cập vào các báo cáo về doanh thu và chất lượng dịch vụ.
+3. Thông tin cơ bản
+ Tên dự án: Phần mềm quản lý dịch vụ thú y cá Koi Sử dụng: Áp dụng cho Trung tâm Thú y Cá Koi, khách hàng, nhân viên, bác sĩ thú y và quản lý của trung tâm. 
+Nền tảng được sử dụng: Ngôn ngữ lập trình: C# được triển khai thông qua ASP NET Core sử dụng Razor Pages. Cơ sở dữ liệu: SQL Server, được duy trì thông qua Entity Framework Core. 
+Giao diện: Một ứng dụng dựa trên web được đặc trưng bởi một thiết kế trực quan và thân thiện với người dùng.
+4. Chức năng chính
+ Quản lý khách hàng: Bao gồm việc quản lý thông tin cá nhân, lịch sử cuộc hẹn và hồ sơ điều trị của khách hàng. 
+Quản lý các cuộc hẹn và tư vấn trực tuyến: Khách hàng có khả năng lên lịch hẹn và nhận tư vấn trực tuyến từ bác sĩ thú y. 
+Quản lý dịch vụ điều trị: Bác sĩ thú y có thể theo dõi và cập nhật tình trạng trị liệu của cá Koi, cũng như cung cấp dịch vụ chăm sóc tại nhà hoặc tại trung tâm. 
+Quản lý phản hồi và đánh giá: Khách hàng được phép gửi đánh giá về chất lượng dịch vụ sau khi kết thúc điều trị. 
+Báo cáo và bảng điều khiển: Cung cấp các báo cáo toàn diện liên quan đến doanh thu, số lượng khách hàng và chất lượng dịch vụ để hỗ trợ quản lý đưa ra các quyết định chiến lược sáng suốt.
+5. Công nghệ được sử dụng
+ ASP NET Core: Sử dụng mẫu kiến trúc Razor Pages để xây dựng giao diện người dùng. Entity Framework Core: Tạo điều kiện quản lý cơ sở dữ liệu thông qua phương pháp Code-First hoặc Database-First. API: Nếu cần thiết, các API Web bổ sung có thể được kết hợp để hỗ trợ các chức năng phù hợp với các ứng dụng di động hoặc tích hợp hệ thống khác.
+ Xác thực và ủy quyền: Kết hợp các cơ chế xác thực thông qua các nhà cung cấp bên ngoài như Facebook và Google.
+6. Phương pháp triển khai
+ Phần mềm sẽ được triển khai trên máy chủ Dịch vụ Thông tin Internet (IIS) hoặc nền tảng đám mây như Microsoft Azure để đảm bảo khả năng truy cập từ xa cho người dùng và quản lý tập trung.
+
+
