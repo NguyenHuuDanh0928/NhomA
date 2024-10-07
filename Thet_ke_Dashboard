@@ -1,0 +1,45 @@
+Chi Tiết Thiết Kế Dashboard của dự án.
+1.	Mục tiêu của Dashboard
+Dashboard tạo ra một cái nhìn tổng quan quan trọng cho quản lý trung tâm, giúp kiểm tra nhanh tiến độ công việc trong trung tâm, các dịch vụ, khách hàng cũng như hiệu suất của nhân viên. Ngoài ra, nó còn theo dõi báo cáo doanh thu và phản hồi của khách hàng.
+2.	Chức năng chính của Dashboard
+Dashboard cần phải là một biểu diễn trực quan của thông tin cụ thể, dễ hiểu và truyền tải hiệu quả hơn so với chỉ dùng từ ngữ hoặc con số, đồng thời tự động làm mới theo thời gian. Các chức năng chính bao gồm:
+	Tổng quan về dịch vụ: (Số lượng lịch hẹn theo ngày, dựa trên các đơn hàng đã hoàn thành và đang trong quá trình phục vụ).
+	Hiệu suất nhân viên: Giám sát số lượng khách hàng mà mỗi nhân viên phục vụ, cũng như tiêu chí mà khách hàng nhận được.
+	Phản hồi và bình luận gần nhất của khách hàng: Về dịch vụ thú y.
+	Doanh thu: Tạo báo cáo doanh thu hàng tuần, hàng tháng và hàng năm để hỗ trợ quản lý trung tâm, theo dõi tài chính.
+	Báo cáo toàn diện: Cung cấp các báo cáo tùy chỉnh về số lượng khách hàng, các dịch vụ phổ biến, các bệnh thường gặp ở cá Koi, v.v.
+3.	Thiết kế bố cục Dashboard
+3.1 Thanh điều hướng
+Thanh điều hướng nằm ở phía trên hoặc bên trái của Dashboard (biểu tượng để mở menu điều hướng).
+	Trang chủ: Tổng quan về Dashboard.
+	Quản lý khách hàng: Nền tảng nhạy cảm với từng khách truy cập và có thông tin chi tiết về khách hàng.
+	Quản lý lịch hẹn: Phân bổ lịch hẹn và tư vấn.
+	Quản lý nhân viên: Quản lý lịch làm việc và hiệu suất của nhân viên.
+	Báo cáo chi tiết: Doanh thu, dịch vụ và phản hồi khách hàng một cách chi tiết.
+	Cài đặt: Cài đặt để thiết lập các thông số chính của hệ thống.
+
+
+
+3.2 Phần chính
+Trong phần chính của Dashboard, chúng ta sẽ có các widget hoặc biểu đồ để hiển thị dữ liệu theo cách trực quan dưới dạng biểu đồ hoặc bảng dữ liệu.
+	Biểu đồ số lượng dịch vụ hằng ngày:
+o	Biểu đồ cột để hiển thị số lượng dịch vụ đã lên lịch, dịch vụ đang thực hiện và dịch vụ đã hoàn thành theo từng ngày.
+o	Có thể minh họa bằng biểu đồ cột hoặc biểu đồ đường để hiển thị số lượng dịch vụ qua các ngày trong tuần.
+	Biểu đồ doanh thu:
+o	Doanh thu theo tháng/quý/năm: Biểu đồ hình tròn hoặc biểu đồ cột. Mã màu cho các dịch vụ để dễ dàng đánh giá tài chính.
+	Bảng hiệu suất nhân viên:
+o	Hiển thị danh sách nhân viên cùng với các khách hàng họ phục vụ trong tuần/tháng. Tạo thang đánh giá hiệu suất dựa trên phản hồi của khách hàng.
+	Phản hồi của khách hàng:
+	Bảng: Hiển thị các phản hồi gần đây, bao gồm các bộ lọc cho ngắn hạn (mới nhất), trung hạn (tuần trước) và dài hạn (tháng trước).
+	Xu hướng: Phát triển một widget để hiển thị các đánh giá tiêu cực cá nhân hoặc một đánh giá tổng thể (điểm đánh giá trung bình).
+3.3 Footer
+	Footer: Chứa bản quyền của hệ thống và các liên kết đến các trang chính sách, hỗ trợ khách hàng hoặc thông tin thêm về trung tâm.
+4. Công nghệ và công cụ sử dụng
+	Giao diện người dùng: Giao diện chính bao gồm tất cả các tệp HTML5, CSS3 và JavaScript thông thường cùng với các trang Razor để tạo một giao diện tốt.
+	Biểu đồ: Sử dụng các thư viện JavaScript để hiển thị biểu đồ, chẳng hạn như echarts, d3.js và Highcharts.
+	Đọc và xử lý dữ liệu: Truy vấn và quản lý các widget bằng cách sử dụng Entity Framework Core.
+	Đăng ký người dùng: Tạo hệ thống xác thực ASP.NET Core chỉ cho phép quản lý hoặc nhân viên truy cập vào Dashboard.
+5. Triển khai và kiểm thử
+	Kiểm thử với dữ liệu thực tế: Sau khi thiết kế hệ thống, cần kiểm thử với dữ liệu thực để xác minh rằng mô hình chính xác và ổn định.
+	Thiết kế đáp ứng: Dashboard cần được thiết kế có tính đáp ứng để hỗ trợ trên các thiết bị như máy tính để bàn, máy tính bảng và điện thoại di động.
+
