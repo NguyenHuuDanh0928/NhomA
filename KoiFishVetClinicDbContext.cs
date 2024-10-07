@@ -16,6 +16,7 @@ namespace KoiFishVetClinicAPI.Data
           public DbSet<PhanHoi> PhanHoi { get; set; } 
           public DbSet<LichSuDatDichVu> LichSuDatDichVu { get; set; }
           public DbSet<LichHen> LichHen { get; set;}
+          public DbSet<LichLamViec> LichLamViec{ get; set; )
      }
 }     
               
