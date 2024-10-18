@@ -1,0 +1,56 @@
+using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+
+namespace YourNamespace.Controllers
+{
+    public class BacSiController : ControllerBase
+    {
+        // Danh sách giả lập các bác sĩ
+        private static List<BacSi> bacSiList = new List<BacSi>()
+        {
+            new BacSi { MaBacSi = 1, TenBacSi = " ", ChuyenMon = " ", ThongTinLienLac = " " }
+        };
+
+        // Lấy danh sách bác sĩ (GET)
+
+        public ActionResult<IEnumerable<BacSi>> LayDanhSachBacSi()
+        {
+            return bacSiList;
+        }
+
+        // Thêm mới bác sĩ (POST)
+    
+        public ActionResult<BacSi> ThemBacSi(BacSi bacSi)
+        {
+            bacSi.MaBacSi = bacSiList.Count + 1;
+            bacSiList.Add(bacSi);
+            return bacSi;
+        }
+
+        // Cập nhật thông tin bác sĩ (PUT)
+        [HttpPut("{id}")]
+        public IActionResult CapNhapBacSi(int maBacSi, BacSi bacSiCapNhap)
+        {
+            var bacSi = bacSiList.Find(bs => bs.MaBacSi == maBacSi);
+            if (bacSi == null)
+                return NotFound();
+
+            bacSi.TenBacSi = bacSiCapNhap.TenBacSi;
+            bacSi.ChuyenMon = bacSiCapNhap.ChuyenMon;
+            bacSi.ThongTinLienLac = bacSiCapNhap.ThongTinLienLac;
+            return NoContent();
+        }
+
+        // Xóa bác sĩ (DELETE)
+
+        public IActionResult XoaBacSi(int maBacSi)
+        {
+            var bacSi = bacSiList.Find(bs => bs.MaBacSi == maBacSi);
+            if (bacSi == null)
+                return NotFound();
+
+            bacSiList.Remove(bacSi);
+            return NoContent();
+        }
+    }
+}
