@@ -106,11 +106,12 @@ CREATE TABLE LichLamViec (
     Ngay DATE NOT NULL,
     GioBatDau TIME NOT NULL,
     GioKetThuc TIME NOT NULL,
+    TrangThai NVACHAR(50),
     FOREIGN KEY (BacSiThuYId) REFERENCES BacSiThuY(Id)
 );
 
 -- Thêm dữ liệu cho bảng LichLamViec
 INSERT INTO LichLamViec (BacSiThuYId, Ngay, GioBatDau, GioKetThuc)
 VALUES
-    (1, '2024-03-18', '08:00:00', '17:00:00'),
-    (2, '2024-03-20', '09:00:00', '18:00:00');
+    (1, '2024-03-18', '08:00:00', '17:00:00', 'Đã đặt'),
+    (2, '2024-03-20', '09:00:00', '18:00:00', 'Đã xác nhận');
