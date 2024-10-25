@@ -1,34 +1,40 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using KoiFishVetClinicAPI.Data;
-using KoiFishVetClinicAPI.Models;
+using WebDichVu.DuLieu;
 
-namespace KoiFishVetClinicAPI.Controllers
+namespace WebDichVu.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class LichHenController : ControllerBase
+    public class LichHenAPI : ControllerBase
     {
-        private readonly KoiFishVetClinicDbContext _context;
+        private readonly PetShopDbContext _context;
 
-        public LichHenController(KoiFishVetClinicDbContext context)
+        public LichHenAPI(PetShopDbContext context)
         {
             _context = context;
         }
 
         // GET: api/LichHen
         [HttpGet]
-        [Produces("application/json")]
         public async Task<ActionResult<IEnumerable<LichHen>>> GetLichHens()
         {
-            return await _context.LichHen.ToListAsync();
+            return await _context.LichHens
+                .Include(l => l.BacSiThuY)
+                .Include(l => l.DichVu)
+                .Include(l => l.KhachHang)
+                .ToListAsync();
         }
 
         // GET: api/LichHen/5
         [HttpGet("{id}")]
         public async Task<ActionResult<LichHen>> GetLichHen(int id)
         {
-            var lichHen = await _context.LichHen.FindAsync(id);
+            var lichHen = await _context.LichHens
+                .Include(l => l.BacSiThuY)
+                .Include(l => l.DichVu)
+                .Include(l => l.KhachHang)
+                .FirstOrDefaultAsync(l => l.Id == id);
 
             if (lichHen == null)
             {
@@ -38,21 +44,10 @@ namespace KoiFishVetClinicAPI.Controllers
             return lichHen;
         }
 
-        // POST: api/LichHen
-        [HttpPost]
-        [Produces("application/json")]
-        public async Task<ActionResult<LichHen>> PostLichHen(LichHen lichHen)
-        {
-            _context.LichHen.Add(lichHen);
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction("GetLichHen", new { id = lichHen.Id }, lichHen);
-        }
-
         // PUT: api/LichHen/5
+        
         [HttpPut("{id}")]
-        [Produces("application/json")]
-        public async Task<IActionResult> PutLichHen(int id, LichHen lichHen)
+        public async Task<IActionResult> PutLichHen(int id, [Bind("KhachHangId, BacSiThuYid, DichVuId, ThoiGian, DiaDiem, TrangThai")] LichHen lichHen)
         {
             if (id != lichHen.Id)
             {
@@ -80,18 +75,28 @@ namespace KoiFishVetClinicAPI.Controllers
             return NoContent();
         }
 
+        // POST: api/LichHen
+        
+        [HttpPost]
+        public async Task<ActionResult<LichHen>> PostLichHen([Bind("KhachHangId, BacSiThuYid, DichVuId, ThoiGian, DiaDiem, TrangThai")] LichHen lichHen)
+        {
+            _context.LichHens.Add(lichHen);
+            await _context.SaveChangesAsync();
+
+            return CreatedAtAction("GetLichHen", new { id = lichHen.Id }, lichHen);
+        }
+
         // DELETE: api/LichHen/5
         [HttpDelete("{id}")]
-        [Produces("application/json")]
         public async Task<IActionResult> DeleteLichHen(int id)
         {
-            var lichHen = await _context.LichHen.FindAsync(id);
+            var lichHen = await _context.LichHens.FindAsync(id);
             if (lichHen == null)
             {
                 return NotFound();
             }
 
-            _context.LichHen.Remove(lichHen);
+            _context.LichHens.Remove(lichHen);
             await _context.SaveChangesAsync();
 
             return NoContent();
@@ -99,7 +104,7 @@ namespace KoiFishVetClinicAPI.Controllers
 
         private bool LichHenExists(int id)
         {
-            return _context.LichHen.Any(e => e.Id == id);
+            return _context.LichHens.Any(e => e.Id == id);
         }
     }
 }
