@@ -1,35 +1,32 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using KoiFishVetClinicAPI.Data;
-using KoiFishVetClinicAPI.Models;
+using WebDichVu.DuLieu;
 
-namespace KoiFishVetClinicAPI.Controllers
+namespace WebDichVu.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class BacSiThuYController : ControllerBase
+    public class BacSiThuYAPI : ControllerBase
     {
-        private readonly KoiFishVetClinicDbContext _context;
+        private readonly PetShopDbContext _context;
 
-        public BacSiThuYController(KoiFishVetClinicDbContext context)
+        public BacSiThuYAPI(PetShopDbContext context)
         {
             _context = context;
         }
 
         // GET: api/BacSiThuY
         [HttpGet]
-        [Produces("application/json")]
         public async Task<ActionResult<IEnumerable<BacSiThuY>>> GetBacSiThuYs()
         {
-            return await _context.BacSiThuY.ToListAsync();
+            return await _context.BacSiThuYs.ToListAsync();
         }
 
         // GET: api/BacSiThuY/5
         [HttpGet("{id}")]
-        [Produces("application/json")]
         public async Task<ActionResult<BacSiThuY>> GetBacSiThuY(int id)
         {
-            var bacSiThuY = await _context.BacSiThuY.FindAsync(id);
+            var bacSiThuY = await _context.BacSiThuYs.FindAsync(id);
 
             if (bacSiThuY == null)
             {
@@ -39,20 +36,9 @@ namespace KoiFishVetClinicAPI.Controllers
             return bacSiThuY;
         }
 
-        // POST: api/BacSiThuY
-        [HttpPost]
-        [Produces("application/json")]
-        public async Task<ActionResult<BacSiThuY>> PostBacSiThuY(BacSiThuY bacSiThuY)
-        {
-            _context.BacSiThuY.Add(bacSiThuY);
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction("GetBacSiThuY", new { id = bacSiThuY.Id }, bacSiThuY);
-        }
-
         // PUT: api/BacSiThuY/5
+       
         [HttpPut("{id}")]
-        [Produces("application/json")]
         public async Task<IActionResult> PutBacSiThuY(int id, BacSiThuY bacSiThuY)
         {
             if (id != bacSiThuY.Id)
@@ -81,18 +67,28 @@ namespace KoiFishVetClinicAPI.Controllers
             return NoContent();
         }
 
+        // POST: api/BacSiThuY
+        
+        [HttpPost]
+        public async Task<ActionResult<BacSiThuY>> PostBacSiThuY(BacSiThuY bacSiThuY)
+        {
+            _context.BacSiThuYs.Add(bacSiThuY);
+            await _context.SaveChangesAsync();
+
+            return CreatedAtAction("GetBacSiThuY", new { id = bacSiThuY.Id }, bacSiThuY);
+        }
+
         // DELETE: api/BacSiThuY/5
         [HttpDelete("{id}")]
-        [Produces("application/json")]
         public async Task<IActionResult> DeleteBacSiThuY(int id)
         {
-            var bacSiThuY = await _context.BacSiThuY.FindAsync(id);
+            var bacSiThuY = await _context.BacSiThuYs.FindAsync(id);
             if (bacSiThuY == null)
             {
                 return NotFound();
             }
 
-            _context.BacSiThuY.Remove(bacSiThuY);
+            _context.BacSiThuYs.Remove(bacSiThuY);
             await _context.SaveChangesAsync();
 
             return NoContent();
@@ -100,7 +96,7 @@ namespace KoiFishVetClinicAPI.Controllers
 
         private bool BacSiThuYExists(int id)
         {
-            return _context.BacSiThuY.Any(e => e.Id == id);
+            return _context.BacSiThuYs.Any(e => e.Id == id);
         }
     }
 }
