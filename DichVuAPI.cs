@@ -1,35 +1,32 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using KoiFishVetClinicAPI.Data;
-using KoiFishVetClinicAPI.Models;
+using WebDichVu.DuLieu;
 
-namespace KoiFishVetClinicAPI.Controllers
+namespace WebDichVu.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class DichVuController : ControllerBase
+    public class DichVuAPI : ControllerBase
     {
-        private readonly KoiFishVetClinicDbContext _context;
+        private readonly PetShopDbContext _context;
 
-        public DichVuController(KoiFishVetClinicDbContext context)
+        public DichVuAPI(PetShopDbContext context)
         {
             _context = context;
         }
 
         // GET: api/DichVu
         [HttpGet]
-        [Produces("application/json")]
         public async Task<ActionResult<IEnumerable<DichVu>>> GetDichVus()
         {
-            return await _context.DichVu.ToListAsync();
+            return await _context.DichVus.ToListAsync();
         }
 
         // GET: api/DichVu/5
         [HttpGet("{id}")]
-        [Produces("application/json")]
         public async Task<ActionResult<DichVu>> GetDichVu(int id)
         {
-            var dichVu = await _context.DichVu.FindAsync(id);
+            var dichVu = await _context.DichVus.FindAsync(id);
 
             if (dichVu == null)
             {
@@ -39,21 +36,10 @@ namespace KoiFishVetClinicAPI.Controllers
             return dichVu;
         }
 
-        // POST: api/DichVu
-        [HttpPost]
-        [Produces("application/json")]
-        public async Task<ActionResult<DichVu>> PostDichVu(DichVu dichVu)
-        {
-            _context.DichVu.Add(dichVu);
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction("GetDichVu", new { id = dichVu.Id }, dichVu);
-        }
-
         // PUT: api/DichVu/5
+       
         [HttpPut("{id}")]
-        [Produces("application/json")]
-        public async Task<IActionResult> PutDichVu(int id, DichVu dichVu)
+        public async Task<IActionResult> PutDichVu(int id, [Bind("TenDichVu, MoTa, Gia, ChiPhiDiChuyen")] DichVu dichVu)
         {
             if (id != dichVu.Id)
             {
@@ -81,18 +67,28 @@ namespace KoiFishVetClinicAPI.Controllers
             return NoContent();
         }
 
+        // POST: api/DichVu
+        
+        [HttpPost]
+        public async Task<ActionResult<DichVu>> PostDichVu([Bind("TenDichVu, MoTa, Gia, ChiPhiDiChuyen")] DichVu dichVu)
+        {
+            _context.DichVus.Add(dichVu);
+            await _context.SaveChangesAsync();
+
+            return CreatedAtAction("GetDichVu", new { id = dichVu.Id }, dichVu);
+        }
+
         // DELETE: api/DichVu/5
         [HttpDelete("{id}")]
-        [Produces("application/json")]
         public async Task<IActionResult> DeleteDichVu(int id)
         {
-            var dichVu = await _context.DichVu.FindAsync(id);
+            var dichVu = await _context.DichVus.FindAsync(id);
             if (dichVu == null)
             {
                 return NotFound();
             }
 
-            _context.DichVu.Remove(dichVu);
+            _context.DichVus.Remove(dichVu);
             await _context.SaveChangesAsync();
 
             return NoContent();
@@ -100,7 +96,7 @@ namespace KoiFishVetClinicAPI.Controllers
 
         private bool DichVuExists(int id)
         {
-            return _context.DichVu.Any(e => e.Id == id);
+            return _context.DichVus.Any(e => e.Id == id);
         }
     }
 }
