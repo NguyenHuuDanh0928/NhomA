@@ -1,35 +1,38 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using KoiFishVetClinicAPI.Data;
-using KoiFishVetClinicAPI.Models;
+using WebDichVu.DuLieu;
 
-namespace KoiFishVetClinicAPI.Controllers
+namespace WebDichVu.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class PhanHoiController : ControllerBase
+    public class PhanHoiAPI : ControllerBase
     {
-        private readonly KoiFishVetClinicDbContext _context;
+        private readonly PetShopDbContext _context;
 
-        public PhanHoiController(KoiFishVetClinicDbContext context)
+        public PhanHoiAPI(PetShopDbContext context)
         {
             _context = context;
         }
 
         // GET: api/PhanHoi
         [HttpGet]
-        [Produces("application/json")]
         public async Task<ActionResult<IEnumerable<PhanHoi>>> GetPhanHois()
         {
-            return await _context.PhanHoi.ToListAsync();
+            return await _context.PhanHois
+                .Include(p => p.DichVu)
+                .Include(p => p.KhachHang)
+                .ToListAsync();
         }
 
         // GET: api/PhanHoi/5
         [HttpGet("{id}")]
-        [Produces("application/json")]
         public async Task<ActionResult<PhanHoi>> GetPhanHoi(int id)
         {
-            var phanHoi = await _context.PhanHoi.FindAsync(id);
+            var phanHoi = await _context.PhanHois
+                .Include(p => p.DichVu)
+                .Include(p => p.KhachHang)
+                .FirstOrDefaultAsync(p => p.Id == id);
 
             if (phanHoi == null)
             {
@@ -39,21 +42,10 @@ namespace KoiFishVetClinicAPI.Controllers
             return phanHoi;
         }
 
-        // POST: api/PhanHoi
-        [HttpPost]
-        [Produces("application/json")]
-        public async Task<ActionResult<PhanHoi>> PostPhanHoi(PhanHoi phanHoi)
-        {
-            _context.PhanHoi.Add(phanHoi);
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction("GetPhanHoi", new { id = phanHoi.Id }, phanHoi);
-        }
-
         // PUT: api/PhanHoi/5
+        
         [HttpPut("{id}")]
-        [Produces("application/json")]
-        public async Task<IActionResult> PutPhanHoi(int id, PhanHoi phanHoi)
+        public async Task<IActionResult> PutPhanHoi(int id, [Bind("KhachHangId, DichVuId, NoiDung, ThoiGian")] PhanHoi phanHoi)
         {
             if (id != phanHoi.Id)
             {
@@ -81,18 +73,28 @@ namespace KoiFishVetClinicAPI.Controllers
             return NoContent();
         }
 
+        // POST: api/PhanHoi
+        
+        [HttpPost]
+        public async Task<ActionResult<PhanHoi>> PostPhanHoi([Bind("KhachHangId, DichVuId, NoiDung, ThoiGian")] PhanHoi phanHoi)
+        {
+            _context.PhanHois.Add(phanHoi);
+            await _context.SaveChangesAsync();
+
+            return CreatedAtAction("GetPhanHoi", new { id = phanHoi.Id }, phanHoi);
+        }
+
         // DELETE: api/PhanHoi/5
         [HttpDelete("{id}")]
-        [Produces("application/json")]
         public async Task<IActionResult> DeletePhanHoi(int id)
         {
-            var phanHoi = await _context.PhanHoi.FindAsync(id);
+            var phanHoi = await _context.PhanHois.FindAsync(id);
             if (phanHoi == null)
             {
                 return NotFound();
             }
 
-            _context.PhanHoi.Remove(phanHoi);
+            _context.PhanHois.Remove(phanHoi);
             await _context.SaveChangesAsync();
 
             return NoContent();
@@ -100,7 +102,7 @@ namespace KoiFishVetClinicAPI.Controllers
 
         private bool PhanHoiExists(int id)
         {
-            return _context.PhanHoi.Any(e => e.Id == id);
+            return _context.PhanHois.Any(e => e.Id == id);
         }
     }
 }
