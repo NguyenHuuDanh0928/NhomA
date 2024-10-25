@@ -1,7 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using KoiFishVetClinicAPI.Data;
 using KoiFishVetClinicAPI.Models;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace KoiFishVetClinicAPI.Controllers
 {
@@ -22,7 +22,7 @@ namespace KoiFishVetClinicAPI.Controllers
         public async Task<ActionResult<IEnumerable<LichLamViec>>> GetLichLamViecs()
         {
             return await _context.LichLamViec
-                .Include(llv => llv.BacSiThuY) // Include thông tin bác sĩ
+               
                 .ToListAsync();
         }
 
@@ -32,7 +32,7 @@ namespace KoiFishVetClinicAPI.Controllers
         public async Task<ActionResult<LichLamViec>> GetLichLamViec(int id)
         {
             var lichLamViec = await _context.LichLamViec
-                .Include(llv => llv.BacSiThuY) // Include thông tin bác sĩ
+                
                 .FirstOrDefaultAsync(llv => llv.Id == id);
 
             if (lichLamViec == null)
