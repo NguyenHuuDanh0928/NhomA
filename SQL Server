@@ -1,3 +1,9 @@
+-- Tạo cơ sở dữ liệu
+CREATE DATABASE ThuYCaKoiVet;
+GO
+USE ThuYCaKoiVet;
+GO
+
 -- Tạo bảng KhachHang
 CREATE TABLE KhachHang (
     Id INT IDENTITY(1,1) PRIMARY KEY,
@@ -16,7 +22,7 @@ INSERT INTO KhachHang (Matkhau, TenKhachHang, SoDienThoai, DiaChi, Email, GhiChu
 VALUES
     (N'123456', N'Nguyễn Văn Hòa', '09876543215', N'123 đường ABC', 'nvhoa@gmail.com', N'Khách hàng thân thiết', N'1995-05-21', 1),
     (N'258369', N'Trần Thị Bích', '09123456788', N'456 đường XYZ', 'ttbich@gmail.com', N'Khách hàng mới', N'2000-07-22', 0),
-    (N'000357', N'Lê Minh Tuấn ', '09366879524', N'789 đường QWE', 'lmtuan@gmail.com', N'Khách hàng mới', N'1999-09-14', 1);
+    (N'000357', N'Lê Minh Tuấn', '09366879524', N'789 đường QWE', 'lmtuan@gmail.com', N'Khách hàng mới', N'1999-09-14', 1);
 
 -- Tạo bảng BacSiThuY
 CREATE TABLE BacSiThuY (
@@ -32,8 +38,8 @@ INSERT INTO BacSiThuY (TenBacSi, ChuyenMon, SoDienThoai, Email)
 VALUES
     (N'Bác sĩ Nguyễn Thị Mai', N'Chăm sóc và điều trị bệnh cho cá Koi', '09012345675', 'bsmai@gmail.com'),
     (N'Bác sĩ Lê Minh Hùng', N'Điều trị bệnh về ký sinh trùng cho cá Koi', '09898765433', 'bshungd@gmail.com'),
-    (N'Bác sĩ Phạn Thị Mai', N'Tư vấn dinh dưỡng cho cá Koi', '03654789254', 'bsmai@gmail.com'),
-    (N'Bác sĩ Phạm Văn Khoa', N'Phẫu thuật và phục hồi cho cá Koi', '02159875624' 'bskhoa@gmail.com');
+    (N'Bác sĩ Phạm Thị Mai', N'Tư vấn dinh dưỡng cho cá Koi', '03654789254', 'bsmai@gmail.com'),
+    (N'Bác sĩ Phạm Văn Khoa', N'Phẫu thuật và phục hồi cho cá Koi', '02159875624', 'bskhoa@gmail.com');  -- Đã thêm dấu phẩy bị thiếu
 
 -- Tạo bảng DichVu
 CREATE TABLE DichVu (
@@ -66,7 +72,7 @@ CREATE TABLE PhanHoi (
 INSERT INTO PhanHoi (KhachHangId, DichVuId, NoiDung, ThoiGian)
 VALUES
     (1, 1, N'Tôi rất hài lòng với dịch vụ chăm sóc cá Koi tại đây. Bác sĩ rất tận tình và chuyên nghiệp, giúp cá của tôi mau khỏe và phát triển tốt. Dịch vụ tư vấn cũng rất nhanh chóng và hỗ trợ kỹ càng.', '2024-03-10 10:00:00'),
-    (2, 2, N'Lần đầu tiên tôi sử dụng dịch vụ thú y cho cá Koi, và tôi cảm thấy rất an tâm. Bác sĩ tư vấn rất kỹ lưỡng về các bệnh thường gặp và cách chăm sóc, giúp cá của tôi hồi phục nhanh cóng.', '2024-03-15 15:30:00'),
+    (2, 2, N'Lần đầu tiên tôi sử dụng dịch vụ thú y cho cá Koi, và tôi cảm thấy rất an tâm. Bác sĩ tư vấn rất kỹ lưỡng về các bệnh thường gặp và cách chăm sóc, giúp cá của tôi hồi phục nhanh chóng.', '2024-03-15 15:30:00'),
     (3, 3, N'Tôi đã tìm kiếm dịch vụ thú y chuyên về cá Koi từ lâu, và khi đến đây, tôi hoàn toàn hài lòng với chất lượng dịch vụ. Bác sĩ không chỉ giỏi chuyên môn mà còn rất nhiệt tình, chu đáo.', '2024-06-21 17:00:00');
 
 -- Tạo bảng LichSuDatDichVu
@@ -113,12 +119,12 @@ CREATE TABLE LichLamViec (
     Ngay DATE NOT NULL,
     GioBatDau TIME NOT NULL,
     GioKetThuc TIME NOT NULL,
-    TrangThai NVACHAR(50),
+    TrangThai NVARCHAR(50),
     FOREIGN KEY (BacSiThuYId) REFERENCES BacSiThuY(Id)
 );
 
 -- Thêm dữ liệu cho bảng LichLamViec
 INSERT INTO LichLamViec (BacSiThuYId, Ngay, GioBatDau, GioKetThuc, TrangThai)
 VALUES
-    (1, '2024-03-18', '08:00:00', '17:00:00', 'Đã đặt'),
-    (2, '2024-03-20', '09:00:00', '18:00:00', 'Đã xác nhận');
+    (1, '2024-03-18', '08:00:00', '17:00:00', N'Đã đặt'),
+    (2, '2024-03-20', '09:00:00', '18:00:00', N'Đã xác nhận');
