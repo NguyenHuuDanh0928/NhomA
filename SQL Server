@@ -1,19 +1,22 @@
 -- Tạo bảng KhachHang
 CREATE TABLE KhachHang (
     Id INT IDENTITY(1,1) PRIMARY KEY,
+    Matkhau NVARCHAR(100) NOT NULL,
     TenKhachHang NVARCHAR(100) NOT NULL,
     SoDienThoai VARCHAR(20) NOT NULL UNIQUE,
     DiaChi NVARCHAR(200),
     Email VARCHAR(100),
-    GhiChu NVARCHAR(MAX)
+    GhiChu NVARCHAR(MAX),
+    NgaySinh DATE NOT NULL, 
+    GioiTinh BIT NOT NULL    -- Giới tính, lưu trữ dưới dạng BIT (0 cho nữ, 1 cho nam)
 );
 
 -- Thêm dữ liệu cho bảng KhachHang
-INSERT INTO KhachHang (TenKhachHang, SoDienThoai, DiaChi, Email, GhiChu)
+INSERT INTO KhachHang (Matkhau, TenKhachHang, SoDienThoai, DiaChi, Email, GhiChu, NgaySinh, GioiTinh)
 VALUES
-    (N'Nguyễn Văn Hòa', '09876543215', N'123 đường ABC', 'nvhoa@gmail.com', N'Khách hàng thân thiết'),
-    (N'Trần Thị Bích', '09123456788', N'456 đường XYZ', 'ttbich@gmail.com', N'Khách hàng mới'),
-    (N'Lê Minh Tuấn ', '09366879524', N'789 đường QWE', 'lmtuan@gmail.com', N'Khách hàng mới');
+    (N'123456', N'Nguyễn Văn Hòa', '09876543215', N'123 đường ABC', 'nvhoa@gmail.com', N'Khách hàng thân thiết', N'1995-05-21', 1),
+    (N'258369', N'Trần Thị Bích', '09123456788', N'456 đường XYZ', 'ttbich@gmail.com', N'Khách hàng mới', N'2000-07-22', 0),
+    (N'000357', N'Lê Minh Tuấn ', '09366879524', N'789 đường QWE', 'lmtuan@gmail.com', N'Khách hàng mới', N'1999-09-14', 1);
 
 -- Tạo bảng BacSiThuY
 CREATE TABLE BacSiThuY (
