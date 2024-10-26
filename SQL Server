@@ -118,7 +118,7 @@ CREATE TABLE LichLamViec (
 );
 
 -- Thêm dữ liệu cho bảng LichLamViec
-INSERT INTO LichLamViec (BacSiThuYId, Ngay, GioBatDau, GioKetThuc)
+INSERT INTO LichLamViec (BacSiThuYId, Ngay, GioBatDau, GioKetThuc, TrangThai)
 VALUES
     (1, '2024-03-18', '08:00:00', '17:00:00', 'Đã đặt'),
     (2, '2024-03-20', '09:00:00', '18:00:00', 'Đã xác nhận');
