@@ -1,0 +1,36 @@
+﻿@model WebDichVu.Datas.LichSuDatDichVu
+
+@{
+    ViewData["Title"] = "Chỉnh sửa lịch sử đặt dịch vụ";
+    Layout = "~/Areas/Admin/Views/Shared/LayoutAdmin.cshtml";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<h4>Lịch sử đặt dịch vụ</h4>
+<hr />
+
+<form asp-action="Edit" method="post">
+    <div class="form-group">
+        <label for="KhachHangId">Khách hàng</label>
+        <select asp-for="KhachHangId" class="form-control" asp-items="ViewData['KhachHangId']"></select>
+    </div>
+
+    <div class="form-group">
+        <label for="DichVuId">Dịch vụ</label>
+        <select asp-for="DichVuId" class="form-control" asp-items="ViewData['DichVuId']"></select>
+    </div>
+
+    <div class="form-group">
+        <label for="ThoiGian">Thời gian</label>
+        <input asp-for="ThoiGian" type="datetime-local" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label for="TrangThai">Trạng thái</label>
+        <input asp-for="TrangThai" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Lưu</button>
+    <a href="@Url.Action("Index", "LichSuDatDichVu", new { area = "Admin" })" class="btn btn-secondary">Hủy</a>
+</form>

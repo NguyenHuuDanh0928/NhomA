@@ -1,0 +1,23 @@
+﻿@model WebDichVu.Datas.KhachHang
+
+@{
+    ViewData["Title"] = "Chi Tiết Khách Hàng";
+    Layout = "~/Areas/Admin/Views/Shared/LayoutAdmin.cshtml";
+}
+
+<h1>Chi Tiết Khách Hàng</h1>
+
+<div>
+    <h3>@Model.TenKhachHang</h3>
+    <p><strong>Số Điện Thoại:</strong> @Model.SoDienThoai</p>
+    <p><strong>Địa Chỉ:</strong> @Model.DiaChi</p>
+    <p><strong>Email:</strong> @Model.Email</p>
+    <p><strong>Ngày Sinh:</strong> @Model.NgaySinh.ToString("dd/MM/yyyy")</p>
+    <p><strong>Giới Tính:</strong> @(Model.GioiTinh ? "Nam" : "Nữ")</p>
+    <p><strong>Ghi Chú:</strong> @Model.GhiChu</p>
+</div>
+
+<div>
+    <a href="@Url.Action("Edit", "KhachHang", new { area = "Admin", id = Model.Id })" class="btn btn-primary">Chỉnh Sửa</a>
+    <a href="@Url.Action("Index", "KhachHang", new { area = "Admin" })" class="btn btn-secondary">Trở Lại</a>
+</div>

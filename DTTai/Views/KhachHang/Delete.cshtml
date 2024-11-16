@@ -1,0 +1,19 @@
+﻿@model WebDichVu.Datas.KhachHang
+
+@{
+    ViewData["Title"] = "Xóa Khách Hàng";
+    Layout = "~/Areas/Admin/Views/Shared/LayoutAdmin.cshtml";
+}
+
+<h1>Xóa Khách Hàng</h1>
+
+<p>Bạn có chắc chắn muốn xóa khách hàng <strong>@Model.TenKhachHang</strong> không?</p>
+
+<form action="@Url.Action("DeleteConfirmed", "KhachHang", new { area = "Admin", id = Model.Id })" method="post">
+    @Html.AntiForgeryToken()
+
+    <div>
+        <button type="submit" class="btn btn-danger">Xóa</button>
+        <a href="@Url.Action("Index", "KhachHang", new { area = "Admin" })" class="btn btn-secondary">Hủy</a>
+    </div>
+</form>

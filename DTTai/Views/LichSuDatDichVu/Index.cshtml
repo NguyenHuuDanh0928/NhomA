@@ -1,0 +1,53 @@
+﻿@model IEnumerable<WebDichVu.Datas.LichSuDatDichVu>
+
+@{
+    ViewData["Title"] = "Lịch sử đặt dịch vụ";
+    Layout = "~/Areas/Admin/Views/Shared/LayoutAdmin.cshtml";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<p>
+    <a href="@Url.Action("Create", "LichSuDatDichVu", new { area = "Admin" })" class="btn btn-primary">Tạo mới</a>
+</p>
+
+@if (Model != null && Model.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Khách hàng</th>
+                <th>Dịch vụ</th>
+                <th>Thời gian</th>
+                <th>Trạng thái</th>
+                <th>Thao tác</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.KhachHang.TenKhachHang</td>
+                    <td>@item.DichVu.TenDichVu</td>
+                    <td>@item.ThoiGian.ToString("dd/MM/yyyy HH:mm")</td>
+                    <td>@item.TrangThai</td>
+                    <td>
+                        <a href="@Url.Action("Details", "LichSuDatDichVu", new { id = item.Id, area = "Admin" })" class="btn btn-info">Chi tiết</a> |
+                        <a href="@Url.Action("Edit", "LichSuDatDichVu", new { id = item.Id, area = "Admin" })" class="btn btn-warning">Sửa</a> |
+                        <a href="@Url.Action("Delete", "LichSuDatDichVu", new { id = item.Id, area = "Admin" })" class="btn btn-danger" onclick="return confirm('Bạn có chắc chắn muốn xóa lịch sử đặt dịch vụ này không?')">Xóa</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <!-- Pagination control (if needed) -->
+    @* Assuming you are using PagedList, you can implement it like this *@
+    <div class="pagination">
+        @Html.PagedListPager(Model.ToPagedList(), page => Url.Action("Index", new { page }))
+    </div>
+}
+else
+{
+    <p>Không có lịch sử đặt dịch vụ nào.</p>
+}

@@ -1,0 +1,79 @@
+﻿@model WebDichVu.Datas.KhachHang
+
+@{
+    ViewData["Title"] = "Thêm Khách Hàng";
+    Layout = "~/Areas/Admin/Views/Shared/LayoutAdmin.cshtml";
+}
+
+<h1>Thêm Khách Hàng</h1>
+
+<form action="@Url.Action("Create", "KhachHang", new { area = "Admin" })" method="post">
+    @Html.AntiForgeryToken()
+
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <!-- Tên Khách Hàng -->
+    <div class="form-group">
+        <label asp-for="TenKhachHang" class="control-label">@Html.DisplayNameFor(model => model.TenKhachHang)</label>
+        <input asp-for="TenKhachHang" class="form-control" />
+        <span asp-validation-for="TenKhachHang" class="text-danger"></span>
+    </div>
+
+    <!-- Mật khẩu -->
+    <div class="form-group">
+        <label asp-for="Matkhau" class="control-label">@Html.DisplayNameFor(model => model.Matkhau)</label>
+        <input asp-for="Matkhau" class="form-control" type="password" />
+        <span asp-validation-for="Matkhau" class="text-danger"></span>
+    </div>
+
+    <!-- Số Điện Thoại -->
+    <div class="form-group">
+        <label asp-for="SoDienThoai" class="control-label">@Html.DisplayNameFor(model => model.SoDienThoai)</label>
+        <input asp-for="SoDienThoai" class="form-control" />
+        <span asp-validation-for="SoDienThoai" class="text-danger"></span>
+    </div>
+
+    <!-- Địa Chỉ -->
+    <div class="form-group">
+        <label asp-for="DiaChi" class="control-label">@Html.DisplayNameFor(model => model.DiaChi)</label>
+        <input asp-for="DiaChi" class="form-control" />
+        <span asp-validation-for="DiaChi" class="text-danger"></span>
+    </div>
+
+    <!-- Email -->
+    <div class="form-group">
+        <label asp-for="Email" class="control-label">@Html.DisplayNameFor(model => model.Email)</label>
+        <input asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+
+    <!-- Ghi Chú -->
+    <div class="form-group">
+        <label asp-for="GhiChu" class="control-label">@Html.DisplayNameFor(model => model.GhiChu)</label>
+        <textarea asp-for="GhiChu" class="form-control"></textarea>
+        <span asp-validation-for="GhiChu" class="text-danger"></span>
+    </div>
+
+    <!-- Ngày Sinh -->
+    <div class="form-group">
+        <label asp-for="NgaySinh" class="control-label">@Html.DisplayNameFor(model => model.NgaySinh)</label>
+        <input asp-for="NgaySinh" class="form-control" type="date" />
+        <span asp-validation-for="NgaySinh" class="text-danger"></span>
+    </div>
+
+    <!-- Giới Tính -->
+    <div class="form-group">
+        <label asp-for="GioiTinh" class="control-label">@Html.DisplayNameFor(model => model.GioiTinh)</label>
+        <select asp-for="GioiTinh" class="form-control">
+            <option value="true">Nam</option>
+            <option value="false">Nữ</option>
+        </select>
+        <span asp-validation-for="GioiTinh" class="text-danger"></span>
+    </div>
+
+    <!-- Nút Submit và Hủy -->
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Thêm Khách Hàng</button>
+        <a href="@Url.Action("Index", "KhachHang", new { area = "Admin" })" class="btn btn-secondary">Hủy</a>
+    </div>
+</form>

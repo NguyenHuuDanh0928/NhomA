@@ -1,0 +1,27 @@
+﻿@model WebDichVu.Datas.LichSuDatDichVu
+
+@{
+    ViewData["Title"] = "Chi tiết lịch sử đặt dịch vụ";
+    Layout = "~/Areas/Admin/Views/Shared/LayoutAdmin.cshtml";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div>
+    <h3>Lịch sử đặt dịch vụ</h3>
+    <dl class="dl-horizontal">
+        <dt>Khách hàng</dt>
+        <dd>@Model.KhachHang.TenKhachHang</dd>
+
+        <dt>Dịch vụ</dt>
+        <dd>@Model.DichVu.TenDichVu</dd>
+
+        <dt>Thời gian</dt>
+        <dd>@Model.ThoiGian.ToString("dd/MM/yyyy HH:mm")</dd>
+
+        <dt>Trạng thái</dt>
+        <dd>@Model.TrangThai</dd>
+    </dl>
+</div>
+
+<a href="@Url.Action("Index", "LichSuDatDichVu", new { area = "Admin" })" class="btn btn-secondary">Quay lại</a>

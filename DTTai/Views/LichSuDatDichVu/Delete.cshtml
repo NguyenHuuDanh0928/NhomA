@@ -1,0 +1,22 @@
+﻿@model WebDichVu.Datas.LichSuDatDichVu
+
+@{
+    ViewData["Title"] = "Xóa lịch sử đặt dịch vụ";
+    Layout = "~/Areas/Admin/Views/Shared/LayoutAdmin.cshtml";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<h3>Bạn có chắc chắn muốn xóa lịch sử đặt dịch vụ này không?</h3>
+
+<div>
+    <h4>Khách hàng: @Model.KhachHang.TenKhachHang</h4>
+    <h4>Dịch vụ: @Model.DichVu.TenDichVu</h4>
+    <h4>Thời gian: @Model.ThoiGian.ToString("dd/MM/yyyy HH:mm")</h4>
+</div>
+
+<form asp-action="DeleteConfirmed" method="post">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">Xóa</button>
+    <a href="@Url.Action("Index", "LichSuDatDichVu", new { area = "Admin" })" class="btn btn-secondary">Hủy</a>
+</form>
