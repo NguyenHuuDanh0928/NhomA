@@ -1,0 +1,41 @@
+﻿@model IEnumerable<WebDichVu.Datas.BacSiThuY>
+
+@{
+    ViewData["Title"] = "Danh sách Bác sĩ";
+    Layout = "~/Areas/Admin/Views/Shared/LayoutAdmin.cshtml";
+}
+
+<h1>Danh sách Bác sĩ</h1>
+
+<p>
+    <a href="@Url.Action("Create", "BacSi", new { area = "Admin" })" class="btn btn-primary">Thêm mới</a> 
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.FirstOrDefault().TenBacSi)</th>
+        <th>@Html.DisplayNameFor(model => model.FirstOrDefault().ChuyenMon)</th> 
+        <th>@Html.DisplayNameFor(model => model.FirstOrDefault().SoDienThoai)</th> 
+        <th>@Html.DisplayNameFor(model => model.FirstOrDefault().Email)</th> 
+        <th>Thao tác</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.TenBacSi)</td>
+                <td>@Html.DisplayFor(modelItem => item.ChuyenMon)</td>
+                <td>@Html.DisplayFor(modelItem => item.SoDienThoai)</td>
+                <td>@Html.DisplayFor(modelItem => item.Email)</td>
+                <td>
+                    
+                    <a href="@Url.Action("Edit", "BacSi", new { area = "Admin", id = item.Id })" class="btn btn-warning">Sửa</a>
+                    <a href="@Url.Action("Details", "BacSi", new { area = "Admin", id = item.Id })" class="btn btn-info">Chi tiết</a>
+                    <a href="@Url.Action("Delete", "BacSi", new { area = "Admin", id = item.Id })" class="btn btn-danger">Xóa</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

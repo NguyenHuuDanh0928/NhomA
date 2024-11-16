@@ -1,0 +1,43 @@
+﻿@model WebDichVu.Datas.BacSiThuY
+
+@{
+    ViewData["Title"] = "Xóa Bác sĩ";
+    Layout = "~/Areas/Admin/Views/Shared/LayoutAdmin.cshtml";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/delete_bacsi.css" />
+</head>
+
+<div class="container">
+    <h2>Xóa Bác sĩ</h2>
+    < <form action="@Url.Action("Delete", "BacSi", new { area = "Admin" })" method="post">
+        @Html.AntiForgeryToken()
+        <input type="hidden" name="Id" value="@Model.Id" />
+
+        <div class="form-group">
+            <label asp-for="TenBacSi" class="control-label">@Html.DisplayNameFor(model => model.TenBacSi)</label>
+            <p>@Html.DisplayFor(model => model.TenBacSi)</p>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="ChuyenMon" class="control-label">@Html.DisplayNameFor(model => model.ChuyenMon)</label>
+            <p>@Html.DisplayFor(model => model.ChuyenMon)</p>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="SoDienThoai" class="control-label">@Html.DisplayNameFor(model => model.SoDienThoai)</label>
+            <p>@Html.DisplayFor(model => model.SoDienThoai)</p>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Email" class="control-label">@Html.DisplayNameFor(model => model.Email)</label>
+            <p>@Html.DisplayFor(model => model.Email)</p>
+        </div>
+
+        <div class="buttons">
+            <button type="submit" class="btn btn-danger">Xóa</button>
+            <a href="@Url.Action("Index", "BacSi", new { area = "Admin" })" class="btn btn-secondary">Hủy</a>
+        </div>
+    </form>
+</div>

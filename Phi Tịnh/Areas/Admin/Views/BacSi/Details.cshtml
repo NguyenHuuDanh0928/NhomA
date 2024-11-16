@@ -1,0 +1,41 @@
+﻿@model WebDichVu.Datas.BacSiThuY
+
+@{
+    ViewData["Title"] = "Chi tiết Bác sĩ";
+    Layout = "~/Areas/Admin/Views/Shared/LayoutAdmin.cshtml";
+}
+<head>
+    <link rel="stylesheet" href="~/css/details_bacsi.css" />
+</head>
+
+<div class="container">
+    <h2>Chi tiết Bác sĩ</h2>
+    <form>
+        <input type="hidden" name="Id" value="@Model.Id" />
+
+        <div class="form-group">
+            <label for="TenBacSi" class="control-label">@Html.DisplayNameFor(model => model.TenBacSi)</label>
+            <input type="text" id="TenBacSi" class="form-control" value="@Model.TenBacSi" readonly />
+        </div>
+
+        <div class="form-group">
+            <label for="ChuyenMon" class="control-label">@Html.DisplayNameFor(model => model.ChuyenMon)</label>
+            <input type="text" id="ChuyenMon" class="form-control" value="@Model.ChuyenMon" readonly />
+        </div>
+
+        <div class="form-group">
+            <label for="SoDienThoai" class="control-label">@Html.DisplayNameFor(model => model.SoDienThoai)</label>
+            <input type="text" id="SoDienThoai" class="form-control" value="@Model.SoDienThoai" readonly />
+        </div>
+
+        <div class="form-group">
+            <label for="Email" class="control-label">@Html.DisplayNameFor(model => model.Email)</label>
+            <input type="text" id="Email" class="form-control" value="@Model.Email" readonly />
+        </div>
+
+        <div class="buttons">
+            <a href="@Url.Action("Edit", "BacSi", new { area = "Admin", id = Model.Id })" class="btn btn-primary">Sửa</a>
+            <a href="@Url.Action("Index", "BacSi", new { area = "Admin" })" class="btn btn-secondary">Quay lại danh sách</a>
+        </div>
+    </form>
+</div>

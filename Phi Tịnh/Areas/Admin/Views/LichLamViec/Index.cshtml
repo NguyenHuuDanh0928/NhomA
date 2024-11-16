@@ -1,0 +1,61 @@
+﻿@model IEnumerable<WebDichVu.Datas.LichLamViec>
+
+@{
+    ViewData["Title"] = "Lịch Làm Việc";
+    Layout = "~/Areas/Admin/Views/Shared/LayoutAdmin.cshtml";
+}
+
+<h1>Lịch Làm Việc</h1>
+
+<p>
+    <a href="@Url.Action("Create", "LichLamViec", new { area = "Admin" })" class="btn btn-primary">Tạo mới</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.BacSiThuY)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ngay)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GioBatDau)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GioKetThuc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TrangThai)
+            </th>
+            <th>Thao tác</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BacSiThuY.TenBacSi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ngay)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GioBatDau)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GioKetThuc)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TrangThai)
+                </td>
+                <td>
+                    <a href="@Url.Action("Edit", "LichLamViec", new { area = "Admin", id = item.Id })" class="btn btn-warning">Sửa</a>
+                    <a href="@Url.Action("Details", "LichLamViec", new { area = "Admin", id = item.Id })" class="btn btn-info">Chi tiết</a>
+                    <a href="@Url.Action("Delete", "LichLamViec", new { area = "Admin", id = item.Id })" class="btn btn-danger">Xóa</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
