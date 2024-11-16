@@ -1,0 +1,62 @@
+﻿@model WebDichVu.Datas.LichLamViec
+
+@{
+    ViewData["Title"] = "Tạo Lịch Làm Việc";
+    Layout = "~/Areas/Admin/Views/Shared/LayoutAdmin.cshtml"; 
+}
+
+<div class="main-panel">
+    <div class="content-wrapper">
+        <h1>Tạo Lịch Làm Việc</h1>
+        <hr />
+        <div class="row">
+            <div class="col-md-4">
+                <form asp-action="Create" method="post">
+                    @Html.AntiForgeryToken()
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                    <div class="form-group">
+                        <label asp-for="BacSiThuYid" class="control-label">Bác Sĩ Thú Y</label>
+                        <select name="BacSiThuYid" id="BacSiThuYid" class="form-control">
+                            <option value="">Chọn bác sĩ</option>
+                            @foreach (var item in (SelectList)ViewData["BacSiThuYid"])
+                            {
+                                <option value="@item.Value">@item.Text</option>
+                            }
+                        </select>
+                        <span asp-validation-for="BacSiThuYid" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Ngay" class="control-label">Ngày</label>
+                        <input asp-for="Ngay" class="form-control" type="date" />
+                        <span asp-validation-for="Ngay" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="GioBatDau" class="control-label">Giờ Bắt Đầu</label>
+                        <input asp-for="GioBatDau" class="form-control" type="time" />
+                        <span asp-validation-for="GioBatDau" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="GioKetThuc" class="control-label">Giờ Kết Thúc</label>
+                        <input asp-for="GioKetThuc" class="form-control" type="time" />
+                        <span asp-validation-for="GioKetThuc" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="TrangThai" class="control-label">Trạng Thái</label>
+                        <input asp-for="TrangThai" class="form-control" />
+                        <span asp-validation-for="TrangThai" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="submit" value="Tạo" class="btn btn-primary" />
+                        <a href="@Url.Action("Index", "LichLamViec", new { area = "Admin" })" class="btn btn-secondary">Hủy</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
