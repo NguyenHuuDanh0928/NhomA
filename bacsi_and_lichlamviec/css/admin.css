@@ -1,0 +1,30 @@
+﻿body {
+    background-color: #e0ffff; /* Màu xanh nhạt */
+    font-family: Arial, sans-serif; /* Font Arial */
+}
+
+/* Màu nền xen kẽ cho bảng */
+.table tbody tr:nth-child(even) {
+    background-color: #d0f0c0; /* Xanh lá cây nhạt */
+}
+
+.table tbody tr:nth-child(odd) {
+    background-color: #ffffff; /* Trắng */
+}
+
+/* Các style khác cho bảng (nếu cần) */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+    .table th, .table td {
+        padding: 8px;
+        border: 1px solid #ddd; /* Viền cho bảng */
+        text-align: left;
+    }
+
+    .table th {
+        background-color: #90ee90; /* Xanh lá cây */
+        color: #333; /* Màu chữ header */
+    }
