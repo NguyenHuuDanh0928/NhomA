@@ -1,0 +1,81 @@
+﻿/* Thiết lập phong cách cơ bản */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Kiểu cho container của trang xóa */
+.delete-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+    .delete-container h1 {
+        color: #d9534f; /* Màu đỏ nổi bật */
+    }
+
+    .delete-container h4 {
+        color: #666;
+        margin-bottom: 20px;
+    }
+
+/* Kiểu cho phần thông tin phản hồi */
+.feedback-details {
+    text-align: left;
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+}
+
+    .feedback-details dt {
+        font-weight: bold;
+        margin-top: 10px;
+    }
+
+    .feedback-details dd {
+        margin: 0;
+        padding-left: 10px;
+    }
+
+/* Kiểu cho các nút */
+.button-container {
+    margin-top: 20px;
+}
+
+    .button-container .btn-danger {
+        background-color: #d9534f;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+        .button-container .btn-danger:hover {
+            background-color: #c9302c;
+        }
+
+    .button-container .btn-secondary {
+        background-color: #6c757d;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-left: 10px;
+    }
+
+        .button-container .btn-secondary:hover {
+            background-color: #5a6268;
+        }

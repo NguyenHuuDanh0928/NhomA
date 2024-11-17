@@ -1,0 +1,32 @@
+﻿@model IEnumerable<DichVuThuYService.Datas.PhanHoi>
+
+@{
+    ViewData["Title"] = "Danh sách phản hồi";
+    Layout = "~/Areas/Admin/Views/Shared/LayoutAdmin.cshtml";
+}
+
+<h2>Danh sách phản hồi</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Khách Hàng</th>
+            <th>Dịch Vụ</th>
+            <th>Nội Dung</th>
+            <th>Thời Gian</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var phanHoi in Model)
+        {
+                <tr>
+                    <td>@phanHoi.Id</td>
+                    <td>@phanHoi.KhachHangId</td>
+                    <td>@phanHoi.DichVuId</td>
+                    <td>@phanHoi.NoiDung</td>
+                    <td>@phanHoi.ThoiGian</td>
+                </tr>
+        }
+    </tbody>
+</table>

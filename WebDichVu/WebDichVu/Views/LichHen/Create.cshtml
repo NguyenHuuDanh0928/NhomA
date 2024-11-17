@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_DatLichHenLayout.cshtml";
+}
+
+@model LichHenViewModel
+
+<form asp-action="Create" method="post">
+     <div class="form-group">
+        <label for="KhachHangId">Mã Khách Hàng</label>
+        <input type="text" class="form-control" id="KhachHangId" name="KhachHangId" />
+    </div>
+    <label for="BacSiThuYId">Chọn Bác Sĩ:</label>
+    <select asp-for="BacSiThuYId" asp-items="Model.BacSiThuYList">
+        <option value="">-- Chọn Bác Sĩ --</option>
+    </select>
+
+    <label for="DichVuId">Chọn Dịch Vụ:</label>
+    <select asp-for="DichVuId" asp-items="Model.DichVuList">
+        <option value="">-- Chọn Dịch Vụ --</option>
+    </select>
+
+    <label for="ThoiGian">Thời Gian:</label>
+    <input type="datetime-local" asp-for="ThoiGian" required />
+
+    <label for="DiaDiem">Địa Điểm:</label>
+    <input type="text" asp-for="DiaDiem" required />
+
+    <button type="submit">Đặt Hẹn</button>
+</form>
+
+

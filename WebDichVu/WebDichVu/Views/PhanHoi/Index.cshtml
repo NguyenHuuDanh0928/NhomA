@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Index";  
+    Layout = "~/Views/Shared/_LayoutDanhGia.cshtml";
+}
+
+@model DichVuThuYRepository.ViewModel.PhanHoiViewModel
+
+<form asp-controller="PhanHoi" asp-action="Index" method="post">  @* *@
+    <div>
+        <label for="KhachHangId">ID Khách Hàng:</label>
+        <input asp-for="KhachHangId" class="form-control" placeholder="Nhập ID Khách Hàng" />
+        <span asp-validation-for="KhachHangId"></span>
+    </div>
+
+    <div>
+        <label for="DichVuId">Dịch Vụ:</label>
+        <select asp-for="DichVuId" asp-items="Model.DichVuList" class="form-control">
+            <option value="">-- Chọn Dịch Vụ --</option>
+        </select>
+        <span asp-validation-for="DichVuId"></span>
+    </div>
+
+    <div>  
+        <label for="NoiDung">Nội Dung Phản Hồi:</label>
+        <textarea asp-for="NoiDung" class="form-control" placeholder="Nhập nội dung phản hồi"></textarea>
+        <span asp-validation-for="NoiDung"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Gửi Phản Hồi</button>
+</form>

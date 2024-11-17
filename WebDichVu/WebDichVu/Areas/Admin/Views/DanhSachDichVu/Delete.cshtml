@@ -1,0 +1,40 @@
+﻿@model DichVuThuYService.Datas.DichVu
+@{
+    ViewData["Title"] = "Xóa Dịch Vụ";
+    Layout = null;
+}
+<head>
+    <link rel="stylesheet" href="~/css/deleteDichVu.css" />
+</head>
+
+
+<div class="container">
+    <h2>Xóa Dịch Vụ</h2>
+    <form asp-action="DeleteConfirmed" asp-route-id="@Model.Id" method="post">
+        @Html.AntiForgeryToken()
+        <input type="hidden" asp-for="Id" />
+
+        <div class="form-group">
+            <label class="control-label">@Html.DisplayNameFor(model => model.TenDichVu)</label>
+            <p class="form-control-plaintext">@Html.DisplayFor(model => model.TenDichVu)</p>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label">@Html.DisplayNameFor(model => model.MoTa)</label>
+            <p class="form-control-plaintext">@Html.DisplayFor(model => model.MoTa)</p>
+        </div>
+
+        @using System.Globalization
+
+        <div class="form-group">
+            <label class="control-label">@Html.DisplayNameFor(model => model.Gia)</label>
+            <p class="form-control-plaintext">@Html.DisplayFor(model => model.Gia)</p>
+            </p>
+        </div>
+
+        <div class="buttons">
+            <button type="submit" class="btn btn-danger">Xóa</button>
+            <a href="@Url.Action("Index", "DanhSachDichVu", new { area = "Admin" })" class="btn btn-secondary">Hủy</a>
+        </div>
+    </form>
+</div>

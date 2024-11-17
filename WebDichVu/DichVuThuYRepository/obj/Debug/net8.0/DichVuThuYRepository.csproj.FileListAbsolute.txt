@@ -1,0 +1,28 @@
+C:\Users\PC\Documents\Zalo Received Files\WebDichVu (1)\WebDichVu (1)\WebDichVu\DichVuThuYRepository\bin\Debug\net8.0\DichVuThuYRepository.deps.json
+C:\Users\PC\Documents\Zalo Received Files\WebDichVu (1)\WebDichVu (1)\WebDichVu\DichVuThuYRepository\bin\Debug\net8.0\DichVuThuYRepository.runtimeconfig.json
+C:\Users\PC\Documents\Zalo Received Files\WebDichVu (1)\WebDichVu (1)\WebDichVu\DichVuThuYRepository\bin\Debug\net8.0\DichVuThuYRepository.dll
+C:\Users\PC\Documents\Zalo Received Files\WebDichVu (1)\WebDichVu (1)\WebDichVu\DichVuThuYRepository\bin\Debug\net8.0\DichVuThuYRepository.pdb
+C:\Users\PC\Documents\Zalo Received Files\WebDichVu (1)\WebDichVu (1)\WebDichVu\DichVuThuYRepository\obj\Debug\net8.0\DichVuThuYRepository.csproj.AssemblyReference.cache
+C:\Users\PC\Documents\Zalo Received Files\WebDichVu (1)\WebDichVu (1)\WebDichVu\DichVuThuYRepository\obj\Debug\net8.0\DichVuThuYRepository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\PC\Documents\Zalo Received Files\WebDichVu (1)\WebDichVu (1)\WebDichVu\DichVuThuYRepository\obj\Debug\net8.0\DichVuThuYRepository.AssemblyInfoInputs.cache
+C:\Users\PC\Documents\Zalo Received Files\WebDichVu (1)\WebDichVu (1)\WebDichVu\DichVuThuYRepository\obj\Debug\net8.0\DichVuThuYRepository.AssemblyInfo.cs
+C:\Users\PC\Documents\Zalo Received Files\WebDichVu (1)\WebDichVu (1)\WebDichVu\DichVuThuYRepository\obj\Debug\net8.0\DichVuThuYRepository.csproj.CoreCompileInputs.cache
+C:\Users\PC\Documents\Zalo Received Files\WebDichVu (1)\WebDichVu (1)\WebDichVu\DichVuThuYRepository\obj\Debug\net8.0\DichVuThuYRepository.dll
+C:\Users\PC\Documents\Zalo Received Files\WebDichVu (1)\WebDichVu (1)\WebDichVu\DichVuThuYRepository\obj\Debug\net8.0\refint\DichVuThuYRepository.dll
+C:\Users\PC\Documents\Zalo Received Files\WebDichVu (1)\WebDichVu (1)\WebDichVu\DichVuThuYRepository\obj\Debug\net8.0\DichVuThuYRepository.pdb
+C:\Users\PC\Documents\Zalo Received Files\WebDichVu (1)\WebDichVu (1)\WebDichVu\DichVuThuYRepository\obj\Debug\net8.0\DichVuThuYRepository.genruntimeconfig.cache
+C:\Users\PC\Documents\Zalo Received Files\WebDichVu (1)\WebDichVu (1)\WebDichVu\DichVuThuYRepository\obj\Debug\net8.0\ref\DichVuThuYRepository.dll
+D:\TaiXuong_D\C++\WebDichVu2\WebDichVu\DichVuThuYRepository\bin\Debug\net8.0\DichVuThuYRepository.deps.json
+D:\TaiXuong_D\C++\WebDichVu2\WebDichVu\DichVuThuYRepository\bin\Debug\net8.0\DichVuThuYRepository.runtimeconfig.json
+D:\TaiXuong_D\C++\WebDichVu2\WebDichVu\DichVuThuYRepository\bin\Debug\net8.0\DichVuThuYRepository.dll
+D:\TaiXuong_D\C++\WebDichVu2\WebDichVu\DichVuThuYRepository\bin\Debug\net8.0\DichVuThuYRepository.pdb
+D:\TaiXuong_D\C++\WebDichVu2\WebDichVu\DichVuThuYRepository\obj\Debug\net8.0\DichVuThuYRepository.csproj.AssemblyReference.cache
+D:\TaiXuong_D\C++\WebDichVu2\WebDichVu\DichVuThuYRepository\obj\Debug\net8.0\DichVuThuYRepository.GeneratedMSBuildEditorConfig.editorconfig
+D:\TaiXuong_D\C++\WebDichVu2\WebDichVu\DichVuThuYRepository\obj\Debug\net8.0\DichVuThuYRepository.AssemblyInfoInputs.cache
+D:\TaiXuong_D\C++\WebDichVu2\WebDichVu\DichVuThuYRepository\obj\Debug\net8.0\DichVuThuYRepository.AssemblyInfo.cs
+D:\TaiXuong_D\C++\WebDichVu2\WebDichVu\DichVuThuYRepository\obj\Debug\net8.0\DichVuThuYRepository.csproj.CoreCompileInputs.cache
+D:\TaiXuong_D\C++\WebDichVu2\WebDichVu\DichVuThuYRepository\obj\Debug\net8.0\DichVuThuYRepository.dll
+D:\TaiXuong_D\C++\WebDichVu2\WebDichVu\DichVuThuYRepository\obj\Debug\net8.0\refint\DichVuThuYRepository.dll
+D:\TaiXuong_D\C++\WebDichVu2\WebDichVu\DichVuThuYRepository\obj\Debug\net8.0\DichVuThuYRepository.pdb
+D:\TaiXuong_D\C++\WebDichVu2\WebDichVu\DichVuThuYRepository\obj\Debug\net8.0\DichVuThuYRepository.genruntimeconfig.cache
+D:\TaiXuong_D\C++\WebDichVu2\WebDichVu\DichVuThuYRepository\obj\Debug\net8.0\ref\DichVuThuYRepository.dll

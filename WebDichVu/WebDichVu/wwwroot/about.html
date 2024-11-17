@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Klinik - Clinic Website Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/Chưa có tên (1920 x 700 px).png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-light p-0 wow fadeIn" data-wow-delay="0.1s">
+        <div class="row gx-0 d-none d-lg-flex">
+            <div class="col-lg-7 px-5 text-start">
+                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                    <small class="fa fa-map-marker-alt text-primary me-2"></small>
+                    <small>Số 123, Đường ABC, Hà Nội, Việt Nam</small>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center py-3">
+                    <small class="far fa-clock text-primary me-2"></small>
+                    <small>Thứ 2 - Thứ 7 : 09.00 AM - 09.00 PM</small>
+                </div>
+            </div>
+            <div class="col-lg-5 px-5 text-end">
+                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                    <small class="fa fa-phone-alt text-primary me-2"></small>
+                    <small>+012 345 6789</small>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center">
+                    <a class="btn btn-sm-square rounded-circle bg-white text-primary me-1" href=""><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-sm-square rounded-circle bg-white text-primary me-1" href=""><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-sm-square rounded-circle bg-white text-primary me-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-sm-square rounded-circle bg-white text-primary me-0" href=""><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container-fluid">
+            <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+                <h1 class="m-0 text-primary"><i class="far fa-hospital me-3"></i>DichVuThuY</h1>
+            </a>
+            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto p-4 p-lg-0">
+                    <a href="index.html" class="nav-item nav-link">Trang Chủ</a>
+                    <a href="about.html" class="nav-item nav-link active">Giới Thiệu</a>
+
+                    <div class="nav-item dropdown">
+                        <a href="service.html" class="nav-link dropdown-toggle" data-bs-toggle="#">
+                            Dịch vụ
+                        </a>
+                        <div class="dropdown-menu rounded-0 rounded-bottom m-0">
+                            <a href="ChuanDoan.html" class="dropdown-item">Chẩn Đoán Sức Khỏe Cá Koi</a>
+                            <a href="KySinhTrung.html" class="dropdown-item">Điều Trị Bệnh Ký Sinh Trùng</a>
+                            <a href="PhauThuat.html" class="dropdown-item">Phẫu Thuật Thú Y</a>
+                            <a href="TuVan.html" class="dropdown-item">Tư Vấn Chăm Sóc</a>
+                            <a href="PhongThiNghiem.html" class="dropdown-item">Phòng Thí Nghiệm Thú Y</a>
+                            <a href="BenhNhiemKhuan.html" class="dropdown-item">Điều Trị Bệnh Nhiễm Khuẩn</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                            Trang Khác
+                        </a>
+                        <div class="dropdown-menu rounded-0 rounded-bottom m-0">
+                            <a href="feature.html" class="dropdown-item">Tính Năng</a>
+                            <a href="team.html" class="dropdown-item">Đội Ngũ Bác Sĩ</a>
+                            <a href="/LichHen/Create" class="dropdown-item">Đặt Lịch Hẹn</a>
+                            <a href="testimonial.html" class="dropdown-item">Khách Hàng Đánh Giá</a>
+                            <a href="404.html" class="dropdown-item">Trang 404 (Lỗi)</a>
+                            <a href="/phanhoi/index" class="dropdown-item">Đánh Giá</a>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="nav-item nav-link">Liên hệ</a>
+
+                    <!-- New Thông Tin Lịch Hẹn Link -->
+                    <a href="/ThongTinLichHen/Index" class="nav-item nav-link">Thông Tin Lịch Hẹn</a>
+
+                    <!-- New Profile Link -->
+                    <a href="/Profile/Index" class="nav-item nav-link">Hồ sơ</a>
+
+                    <!-- Login and Register Links -->
+                    <a href="/KhachHang/DangKy" class="nav-item nav-link btn-register">Đăng Ký</a>
+                    <a href="/KhachHang/DangNhap" class="nav-item nav-link btn-login">Đăng Nhập</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s" style="background-image: url('img/Chưa có tên (1920 x 700 px).png'); background-size: cover; background-position: center;">
+        <div class="container py-5">
+            <h1 class="display-3 text-white mb-3 animated slideInDown">Giới Thiệu</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb text-uppercase mb-0">
+                    <li class="breadcrumb-item"><a class="text-white" href="#">Trang Chủ</a></li>
+                    <li class="breadcrumb-item text-primary active" aria-current="page">Giới thiệu</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Page Header End -->
+    <!-- About Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="d-flex flex-column">
+                        <img class="img-fluid rounded w-75 align-self-end" src="img/carp-4744764_640.jpg" alt="">
+                        <img class="img-fluid rounded w-50 bg-white pt-1 pe-1" src="img/fish-4720154_640.jpg" alt="" style="margin-top: -25%;">
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                    <p class="d-inline-block border rounded-pill py-1 px-4">Về chúng tôi</p>
+                    <h1 class="mb-4">Tại Sao Bạn Nên Tin Tưởng Chúng Tôi? Tìm Hiểu Về Dịch Vụ Của Chúng Tôi!</h1>
+                    <p>Chúng tôi luôn cam kết cung cấp dịch vụ chăm sóc thú y tốt nhất cho cá Koi của bạn. Với đội ngũ bác sĩ chuyên nghiệp và tận tâm, chúng tôi đảm bảo mang đến sức khỏe tối ưu cho các chú cá của bạn.</p>
+                    <p class="mb-4">Chúng tôi hiểu rằng mỗi chú cá Koi đều xứng đáng được nhận sự chăm sóc tốt nhất. Chính vì vậy, chúng tôi không ngừng nghiên cứu và áp dụng các phương pháp điều trị hiện đại nhất để đảm bảo sức khỏe lâu dài cho thú cưng của bạn.</p>
+                    <p><i class="far fa-check-circle text-primary me-3"></i>Chăm sóc sức khỏe thú y chất lượng</p>
+                    <p><i class="far fa-check-circle text-primary me-3"></i>Chỉ những bác sĩ thú y được đào tạo bài bản</p>
+                    <p><i class="far fa-check-circle text-primary me-3"></i>Chuyên gia nghiên cứu y học thú y</p>
+                    <a class="btn btn-primary rounded-pill py-3 px-5 mt-3" href="GioiThieupage.html">Đọc thêm</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+    <!-- Feature Start -->
+    <div class="container-fluid bg-primary overflow-hidden my-5 px-lg-0">
+        <div class="container feature px-lg-0">
+            <div class="row g-0 mx-lg-0">
+                <div class="col-lg-6 feature-text py-5 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="p-lg-5 ps-lg-0">
+                        <p class="d-inline-block border rounded-pill text-light py-1 px-4">Tính Năng</p>
+                        <h1 class="text-white mb-4">Tại Sao Chọn Chúng Tôi</h1>
+                        <p class="text-white mb-4 pb-2">Dịch vụ thú y của chúng tôi cung cấp giải pháp toàn diện và chuyên nghiệp cho cá Koi. Đội ngũ bác sĩ giàu kinh nghiệm kết hợp với trang thiết bị hiện đại, chúng tôi cam kết mang lại sức khỏe tốt nhất cho thú cưng của bạn.</p>
+                        <div class="row g-4">
+                            <div class="col-6">
+                                <div class="d-flex align-items-center">
+                                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-light" style="width: 55px; height: 55px;">
+                                        <i class="fa fa-user-md text-primary"></i>
+                                    </div>
+                                    <div class="ms-4">
+                                        <p class="text-white mb-2">Kinh Nghiệm</p>
+                                        <h5 class="text-white mb-0">Bác Sĩ Thú Y</h5>
+                                        <p class="text-white mb-4">Đội ngũ bác sĩ thú y của chúng tôi có nhiều năm kinh nghiệm trong việc chăm sóc và điều trị cá Koi, đảm bảo hiệu quả và an toàn.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="d-flex align-items-center">
+                                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-light" style="width: 55px; height: 55px;">
+                                        <i class="fa fa-check text-primary"></i>
+                                    </div>
+                                    <div class="ms-4">
+                                        <p class="text-white mb-2">Tư Vấn Tích Cực</p>
+                                        <h5 class="text-white mb-0">Tham Vấn Chuyên Gia</h5>
+                                        <p class="text-white mb-4">Chúng tôi cung cấp dịch vụ tư vấn miễn phí và chuyên nghiệp để giúp bạn chăm sóc cá Koi tốt nhất.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="d-flex align-items-center">
+                                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-light" style="width: 55px; height: 55px;">
+                                        <i class="fa fa-comment-medical text-primary"></i>
+                                    </div>
+                                    <div class="ms-4">
+                                        <p class="text-white mb-2">Chất Lượng</p>
+                                        <h5 class="text-white mb-0">Dịch Vụ Hàng Đầu</h5>
+                                        <p class="text-white mb-4">Mỗi dịch vụ đều được thực hiện với tiêu chuẩn cao nhất, mang lại sự hài lòng tối đa cho khách hàn.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="d-flex align-items-center">
+                                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-light" style="width: 55px; height: 55px;">
+                                        <i class="fa fa-headphones text-primary"></i>
+                                    </div>
+                                    <div class="ms-4">
+                                        <p class="text-white mb-2">Hỗ Trợ 24/7</p>
+                                        <h5 class="text-white mb-0">Hỗ Trợ Khách Hàng</h5>
+                                        <p class="text-white mb-4">Đội ngũ hỗ trợ của chúng tôi luôn sẵn sàng giải đáp mọi thắc mắc của bạn bất kể thời gian.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 pe-lg-0 wow fadeIn" data-wow-delay="0.5s" style="min-height: 400px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute img-fluid w-100 h-100" src="img/feature.jpg" style="object-fit: cover;" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Feature End -->
+    <!-- Team Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <p class="d-inline-block border rounded-pill py-1 px-4">Bác Sĩ </p>
+                <h1>
+                    Kinh nghiệm của chúng tôi
+                </h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item position-relative rounded overflow-hidden">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="https://media.istockphoto.com/id/2017625986/vi/anh/asian-young-female-medical-worker-wearing-a-white-coat-and-writing-medical-records.jpg?s=612x612&w=0&k=20&c=Y9QpjdcRqxmstFw3v0PG8VlvjZtQfXZJE5QaO5wsJTA=" alt="">
+                        </div>
+                        <div class="team-text bg-light text-center p-4">
+                            <h5>Bác Sĩ:Nguyễn Thị Mai</h5>
+                            <p class="text-primary">Chuyên Khoa: Chăm sóc và điều trị bệnh cho cá Koi</p>
+                            <div class="team-social text-center">
+                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item position-relative rounded overflow-hidden">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="https://media.istockphoto.com/id/152158185/vi/anh/hai-b%C3%A1c-s%C4%A9.jpg?s=612x612&w=0&k=20&c=ghV1Z3LEsI1mlvi3VH-Ps1CaTf7k2Y-LwymfsIlL660=" alt="">
+                        </div>
+                        <div class="team-text bg-light text-center p-4">
+                            <h5>Bác Sĩ:Lê Minh Hùng</h5>
+                            <p class="text-primary">Chuyên Khoa:Điều trị bệnh về ký sinh trùng cho cá Koi</p>
+                            <div class="team-social text-center">
+                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="team-item position-relative rounded overflow-hidden">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="https://media.istockphoto.com/id/928197928/vi/anh/ng%C6%B0%E1%BB%9Di-ph%E1%BB%A5-n%E1%BB%AF-b%C3%A1c-s%C4%A9-y-khoa-ch%C3%A2u-%C3%A1-m%E1%BB%89m-c%C6%B0%E1%BB%9Di-v%E1%BB%9Bi-%E1%BB%91ng-nghe-trong-b%E1%BB%87nh-vi%E1%BB%87n-v%E1%BB%9Bi-kh%C3%B4ng-gian-sao-ch%C3%A9p.jpg?s=612x612&w=0&k=20&c=CKnHIkbtZX89oIQEnPW57B4cGH8FbR-E38aaHufZCUM=" alt="">
+                        </div>
+                        <div class="team-text bg-light text-center p-4">
+                            <h5>Bác Sĩ:Phạm Thị Lan</h5>
+                            <p class="text-primary">Chuyên Khoa: Tư vấn dinh dưỡng cho cá Koi</p>
+                            <div class="team-social text-center">
+                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="team-item position-relative rounded overflow-hidden">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="https://media.istockphoto.com/id/511437681/vi/anh/c%C3%A1c-b%C3%A1c-s%C4%A9-t%E1%BA%A1i-v%C4%83n-ph%C3%B2ng.jpg?s=612x612&w=0&k=20&c=-Hb5fCIVYGhvl279ksi3FU3vmM1IPJMBHRNE9kSS1-8=" alt="">
+                        </div>
+                        <div class="team-text bg-light text-center p-4">
+                            <h5>Bác Sĩ:Phạm Văn Khoa</h5>
+                            <p class="text-primary">Chuyên Khoa: Phẫu thuật và phục hồi cho cá Koi</p>
+                            <div class="team-social text-center">
+                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Team End -->
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-light mb-4">Địa Chỉ</h5>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i> Số 123, Đường ABC, Thành Phố Hồ Chí Minh, Việt Nam</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social rounded-circle" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social rounded-circle" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social rounded-circle" href=""><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social rounded-circle" href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-light mb-4">Dịch Vụ</h5>
+                    <a class="btn btn-link" href="">Chăm sóc sức khỏe cá Koi</a>
+                    <a class="btn btn-link" href="">Điều trị bệnh ký sinh trùng</a>
+                    <a class="btn btn-link" href="">Tư vấn dinh dưỡng cho cá Koi</a>
+                    <a class="btn btn-link" href="">Phẫu thuật thú y cho cá Koi</a>
+                    <a class="btn btn-link" href="">Phòng thí nghiệm kiểm tra sức khỏe cá Koi</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-light mb-4">Liên Kết </h5>
+                    <a class="btn btn-link" href="">Về chúng tôi</a>
+                    <a class="btn btn-link" href=""> Liên hệ</a>
+                    <a class="btn btn-link" href=""> Dịch vụ của chúng tôi</a>
+                    <a class="btn btn-link" href="">Điều khoản & Điều kiện</a>
+                    <a class="btn btn-link" href="">Hỗ trợ khách hàng</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-light mb-4">Đăng Ký Nhận Tin</h5>
+                    <p>Nhận thông tin mới nhất về chăm sóc và điều trị cá Koi.</p>
+                    <div class="position-relative mx-auto" style="max-width: 400px;">
+                        <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Nhập email của bạn:">
+                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Đăng ký</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#"> Dịch Vụ Thú Y Cá Koi</a>, All Right Reserved.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                        Designed By <a class="border-bottom" href="">HTML Codex</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

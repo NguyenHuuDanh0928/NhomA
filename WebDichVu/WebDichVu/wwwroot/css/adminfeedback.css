@@ -1,0 +1,166 @@
+﻿/* Thiết lập tổng thể cho trang */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Phong cách tiêu đề */
+h2 {
+    color: #333;
+    font-size: 1.6em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Nút "Create New" */
+a.create-new {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 8px 12px;
+    background-color: #28a745;
+    color: #fff;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+    a.create-new:hover {
+        background-color: #218838;
+    }
+
+/* Phong cách bảng và container */
+.table-container {
+    max-height: 400px; /* Chiều cao tối đa của bảng để tạo thanh cuộn dọc */
+    overflow-y: auto; /* Bật thanh cuộn dọc khi nội dung vượt quá chiều cao */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.table-responsive {
+    width: 100%;
+    overflow-x: auto; /* Bật thanh cuộn ngang khi bảng quá rộng */
+    -webkit-overflow-scrolling: touch; /* Cuộn mượt trên iOS */
+    padding-bottom: 10px;
+}
+
+/* Phong cách chung cho bảng */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1em;
+    min-width: 800px; /* Đặt chiều rộng tối thiểu để tạo thanh cuộn ngang khi cần */
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+    white-space: nowrap; /* Giữ nội dung trên một dòng */
+}
+
+th {
+    background-color: #4CAF50;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1em;
+    text-transform: uppercase;
+    position: sticky;
+    top: 0; /* Giữ cố định phần tiêu đề khi cuộn */
+}
+
+/* Màu nền xen kẽ cho các hàng */
+tr:nth-child(even) td {
+    background-color: #e8f5e9;
+}
+
+tr:nth-child(odd) td {
+    background-color: #ffffff;
+}
+
+/* Hiệu ứng hover */
+tr:hover td {
+    background-color: #c8e6c9;
+    transition: background-color 0.3s;
+}
+
+/* Phong cách các liên kết thao tác */
+td a {
+    margin-right: 8px;
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+    td a:hover {
+        text-decoration: underline;
+        color: #0056b3;
+    }
+
+/* Tùy chỉnh thanh cuộn */
+.table-container::-webkit-scrollbar, .table-responsive::-webkit-scrollbar {
+    height: 8px;
+}
+
+.table-container::-webkit-scrollbar-thumb, .table-responsive::-webkit-scrollbar-thumb {
+    background-color: #4CAF50;
+    border-radius: 4px;
+}
+
+.table-container::-webkit-scrollbar-track, .table-responsive::-webkit-scrollbar-track {
+    background-color: #e0e0e0;
+}
+
+/* Phong cách phản hồi trên màn hình nhỏ */
+@media (max-width: 768px) {
+    th, td {
+        font-size: 0.9em;
+        padding: 8px;
+    }
+
+    /* Thiết lập chế độ hiển thị xếp chồng trên màn hình nhỏ */
+    table, th, td {
+        display: block;
+        width: 100%;
+    }
+
+    th {
+        background-color: #4CAF50;
+        color: #fff;
+        text-align: left;
+    }
+    /* Định dạng nút Delete */
+    .btn-danger {
+        color: #fff;
+        background-color: #d9534f;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 4px;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+        .btn-danger:hover {
+            background-color: #c9302c;
+        }
+
+    td {
+        border-top: 1px solid #ddd;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        text-align: left;
+    }
+
+    tr {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+}

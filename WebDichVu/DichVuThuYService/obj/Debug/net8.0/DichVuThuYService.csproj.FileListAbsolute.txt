@@ -1,0 +1,30 @@
+C:\Users\PC\Documents\Zalo Received Files\WebDichVu (1)\WebDichVu (1)\WebDichVu\DichVuThuYService\bin\Debug\net8.0\DichVuThuYService.deps.json
+C:\Users\PC\Documents\Zalo Received Files\WebDichVu (1)\WebDichVu (1)\WebDichVu\DichVuThuYService\bin\Debug\net8.0\DichVuThuYService.dll
+C:\Users\PC\Documents\Zalo Received Files\WebDichVu (1)\WebDichVu (1)\WebDichVu\DichVuThuYService\bin\Debug\net8.0\DichVuThuYService.pdb
+C:\Users\PC\Documents\Zalo Received Files\WebDichVu (1)\WebDichVu (1)\WebDichVu\DichVuThuYService\bin\Debug\net8.0\DichVuThuYRepository.dll
+C:\Users\PC\Documents\Zalo Received Files\WebDichVu (1)\WebDichVu (1)\WebDichVu\DichVuThuYService\bin\Debug\net8.0\DichVuThuYRepository.pdb
+C:\Users\PC\Documents\Zalo Received Files\WebDichVu (1)\WebDichVu (1)\WebDichVu\DichVuThuYService\obj\Debug\net8.0\DichVuThuYService.csproj.AssemblyReference.cache
+C:\Users\PC\Documents\Zalo Received Files\WebDichVu (1)\WebDichVu (1)\WebDichVu\DichVuThuYService\obj\Debug\net8.0\DichVuThuYService.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\PC\Documents\Zalo Received Files\WebDichVu (1)\WebDichVu (1)\WebDichVu\DichVuThuYService\obj\Debug\net8.0\DichVuThuYService.AssemblyInfoInputs.cache
+C:\Users\PC\Documents\Zalo Received Files\WebDichVu (1)\WebDichVu (1)\WebDichVu\DichVuThuYService\obj\Debug\net8.0\DichVuThuYService.AssemblyInfo.cs
+C:\Users\PC\Documents\Zalo Received Files\WebDichVu (1)\WebDichVu (1)\WebDichVu\DichVuThuYService\obj\Debug\net8.0\DichVuThuYService.csproj.CoreCompileInputs.cache
+C:\Users\PC\Documents\Zalo Received Files\WebDichVu (1)\WebDichVu (1)\WebDichVu\DichVuThuYService\obj\Debug\net8.0\DichVuTh.19BD9212.Up2Date
+C:\Users\PC\Documents\Zalo Received Files\WebDichVu (1)\WebDichVu (1)\WebDichVu\DichVuThuYService\obj\Debug\net8.0\DichVuThuYService.dll
+C:\Users\PC\Documents\Zalo Received Files\WebDichVu (1)\WebDichVu (1)\WebDichVu\DichVuThuYService\obj\Debug\net8.0\refint\DichVuThuYService.dll
+C:\Users\PC\Documents\Zalo Received Files\WebDichVu (1)\WebDichVu (1)\WebDichVu\DichVuThuYService\obj\Debug\net8.0\DichVuThuYService.pdb
+C:\Users\PC\Documents\Zalo Received Files\WebDichVu (1)\WebDichVu (1)\WebDichVu\DichVuThuYService\obj\Debug\net8.0\ref\DichVuThuYService.dll
+D:\TaiXuong_D\C++\WebDichVu2\WebDichVu\DichVuThuYService\obj\Debug\net8.0\DichVuThuYService.csproj.AssemblyReference.cache
+D:\TaiXuong_D\C++\WebDichVu2\WebDichVu\DichVuThuYService\obj\Debug\net8.0\DichVuThuYService.GeneratedMSBuildEditorConfig.editorconfig
+D:\TaiXuong_D\C++\WebDichVu2\WebDichVu\DichVuThuYService\obj\Debug\net8.0\DichVuThuYService.AssemblyInfoInputs.cache
+D:\TaiXuong_D\C++\WebDichVu2\WebDichVu\DichVuThuYService\obj\Debug\net8.0\DichVuThuYService.AssemblyInfo.cs
+D:\TaiXuong_D\C++\WebDichVu2\WebDichVu\DichVuThuYService\obj\Debug\net8.0\DichVuThuYService.csproj.CoreCompileInputs.cache
+D:\TaiXuong_D\C++\WebDichVu2\WebDichVu\DichVuThuYService\bin\Debug\net8.0\DichVuThuYService.deps.json
+D:\TaiXuong_D\C++\WebDichVu2\WebDichVu\DichVuThuYService\bin\Debug\net8.0\DichVuThuYService.dll
+D:\TaiXuong_D\C++\WebDichVu2\WebDichVu\DichVuThuYService\bin\Debug\net8.0\DichVuThuYService.pdb
+D:\TaiXuong_D\C++\WebDichVu2\WebDichVu\DichVuThuYService\bin\Debug\net8.0\DichVuThuYRepository.dll
+D:\TaiXuong_D\C++\WebDichVu2\WebDichVu\DichVuThuYService\bin\Debug\net8.0\DichVuThuYRepository.pdb
+D:\TaiXuong_D\C++\WebDichVu2\WebDichVu\DichVuThuYService\obj\Debug\net8.0\DichVuTh.19BD9212.Up2Date
+D:\TaiXuong_D\C++\WebDichVu2\WebDichVu\DichVuThuYService\obj\Debug\net8.0\DichVuThuYService.dll
+D:\TaiXuong_D\C++\WebDichVu2\WebDichVu\DichVuThuYService\obj\Debug\net8.0\refint\DichVuThuYService.dll
+D:\TaiXuong_D\C++\WebDichVu2\WebDichVu\DichVuThuYService\obj\Debug\net8.0\DichVuThuYService.pdb
+D:\TaiXuong_D\C++\WebDichVu2\WebDichVu\DichVuThuYService\obj\Debug\net8.0\ref\DichVuThuYService.dll
