@@ -1,0 +1,37 @@
+﻿@model DichVuThuYRepository.ViewModel.LoginVM
+@{
+    Layout = "~/Views/Shared/_LayoutDangNhap.cshtml";
+    ViewData["Title"] = "Đăng Nhập";
+}
+
+<div class="container py-5">
+    <h1 class="text-center mb-4">Đăng Nhập</h1>
+    <div class="d-flex justify-content-center">
+        <div class="card shadow-lg p-4" style="max-width: 500px; width: 100%; border-radius: 15px;">
+            <!-- Ẩn hoặc xóa asp-validation-summary để không hiển thị lỗi tổng hợp -->
+            <!-- <div asp-validation-summary="All" class="text-danger mb-3"></div> -->
+
+            <form asp-action="DangNhap" asp-route-returnurl="@ViewBag.ReturnUrl">
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email*</label>
+                    <input asp-for="Email" class="form-control" id="email" placeholder="Nhập email" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label for="matkhau" class="form-label">Mật Khẩu*</label>
+                    <input asp-for="Matkhau" type="password" class="form-control" id="matkhau" placeholder="Nhập mật khẩu" />
+                    <span asp-validation-for="Matkhau" class="text-danger"></span>
+                </div>
+
+                <!-- Nút đăng nhập -->
+                <button type="submit" class="btn btn-primary w-100 py-2 mt-3">Đăng Nhập</button>
+
+                <!-- Liên kết quên mật khẩu -->
+                <div class="text-center mt-3">
+                    <a href="#" class="text-decoration-none text-muted">Quên mật khẩu?</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

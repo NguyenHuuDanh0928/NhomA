@@ -1,0 +1,242 @@
+﻿a
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Klinik - Clinic Website Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-light p-0 wow fadeIn" data-wow-delay="0.1s">
+        <div class="row gx-0 d-none d-lg-flex">
+            <div class="col-lg-7 px-5 text-start">
+                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                    <small class="fa fa-map-marker-alt text-primary me-2"></small>
+                    <small>Số 123, Đường ABC, Hà Nội, Việt Nam</small>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center py-3">
+                    <small class="far fa-clock text-primary me-2"></small>
+                    <small>Thứ 2 - Thứ 7 : 09.00 AM - 09.00 PM</small>
+                </div>
+            </div>
+            <div class="col-lg-5 px-5 text-end">
+                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                    <small class="fa fa-phone-alt text-primary me-2"></small>
+                    <small>+012 345 6789</small>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center">
+                    <a class="btn btn-sm-square rounded-circle bg-white text-primary me-1" href=""><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-sm-square rounded-circle bg-white text-primary me-1" href=""><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-sm-square rounded-circle bg-white text-primary me-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-sm-square rounded-circle bg-white text-primary me-0" href=""><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container-fluid">
+            <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+                <h1 class="m-0 text-primary"><i class="far fa-hospital me-3"></i>DichVuThuY</h1>
+            </a>
+            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto p-4 p-lg-0">
+                    <a href="index.html" class="nav-item nav-link">Trang Chủ</a>
+                    <a href="about.html" class="nav-item nav-link ">Giới Thiệu</a>
+
+                    <div class="nav-item dropdown">
+                        <a href="service.html" class="nav-link dropdown-toggle active " data-bs-toggle="#">
+                            Dịch vụ
+                        </a>
+                        <div class="dropdown-menu rounded-0 rounded-bottom m-0">
+                            <a href="ChuanDoan.html" class="dropdown-item">Chẩn Đoán Sức Khỏe Cá Koi</a>
+                            <a href="KySinhTrung.html" class="dropdown-item">Điều Trị Bệnh Ký Sinh Trùng</a>
+                            <a href="PhauThuat.html" class="dropdown-item">Phẫu Thuật Thú Y</a>
+                            <a href="TuVan.html" class="dropdown-item">Tư Vấn Chăm Sóc</a>
+                            <a href="PhongThiNghiem.html" class="dropdown-item">Phòng Thí Nghiệm Thú Y</a>
+                            <a href="BenhNhiemKhuan.html" class="dropdown-item active ">Điều Trị Bệnh Nhiễm Khuẩn</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                            Trang Khác
+                        </a>
+                        <div class="dropdown-menu rounded-0 rounded-bottom m-0">
+                            <a href="feature.html" class="dropdown-item">Tính Năng</a>
+                            <a href="team.html" class="dropdown-item">Đội Ngũ Bác Sĩ</a>
+                            <a href="/LichHen/Create" class="dropdown-item">Đặt Lịch Hẹn</a>
+                            <a href="testimonial.html" class="dropdown-item">Khách Hàng Đánh Giá</a>
+                            <a href="404.html" class="dropdown-item">Trang 404 (Lỗi)</a>
+                            <a href="/phanhoi/index" class="dropdown-item">Đánh Giá</a>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="nav-item nav-link">Liên hệ</a>
+
+                    <!-- New Thông Tin Lịch Hẹn Link -->
+                    <a href="/ThongTinLichHen/Index" class="nav-item nav-link">Thông Tin Lịch Hẹn</a>
+
+                    <!-- New Profile Link -->
+                    <a href="/Profile/Index" class="nav-item nav-link">Hồ sơ</a>
+
+                    <!-- Login and Register Links -->
+                    <a href="/KhachHang/DangKy" class="nav-item nav-link btn-register">Đăng Ký</a>
+                    <a href="/KhachHang/DangNhap" class="nav-item nav-link btn-login">Đăng Nhập</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+    <!-- Phần Điều Trị Bệnh Nhiễm Khuẩn Cho Cá Koi Start -->
+    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <h2 class="display-5 mb-4 text-primary text-center">Điều Trị Bệnh Nhiễm Khuẩn Cho Cá Koi</h2>
+                    <p class="lead mb-4 text-center">Chuyên gia của chúng tôi có kinh nghiệm trong việc điều trị các loại bệnh nhiễm khuẩn phổ biến ở cá Koi, đảm bảo quá trình phục hồi nhanh chóng và an toàn.</p>
+
+                    <h3 class="text-secondary">Tầm Quan Trọng Của Việc Điều Trị Bệnh Nhiễm Khuẩn</h3>
+                    <p class="mb-4">Bệnh nhiễm khuẩn là một trong những nguyên nhân hàng đầu dẫn đến suy giảm sức khỏe và nguy cơ tử vong ở cá Koi. Nếu không được điều trị kịp thời, nhiễm khuẩn có thể lây lan và gây hại đến toàn bộ hệ sinh thái hồ cá. Các triệu chứng thường gặp của bệnh nhiễm khuẩn bao gồm da loét, mang viêm nhiễm và vây xơ hóa. Phát hiện sớm và xử lý đúng cách sẽ giúp ngăn ngừa bệnh lây lan, giảm đau đớn cho cá và giúp cá mau chóng phục hồi.</p>
+
+                    <h3 class="text-secondary">Quy Trình Điều Trị Bệnh Nhiễm Khuẩn Tại Trung Tâm Chúng Tôi</h3>
+                    <ul class="mb-4">
+                        <li><strong>Chẩn Đoán Và Phân Tích:</strong> Chúng tôi tiến hành kiểm tra kỹ lưỡng để xác định loại vi khuẩn gây bệnh. Quy trình chẩn đoán này bao gồm việc xét nghiệm mẫu từ da, vây và nước trong hồ để đánh giá mức độ nhiễm khuẩn.</li>
+                        <li><strong>Sử Dụng Thuốc Kháng Sinh Chuyên Biệt:</strong> Dựa trên kết quả chẩn đoán, chúng tôi sẽ lựa chọn loại kháng sinh phù hợp, đảm bảo hiệu quả trong việc tiêu diệt vi khuẩn mà không gây hại cho cá hoặc hệ sinh thái trong hồ. Các thuốc kháng sinh được sử dụng đều là các sản phẩm đã được kiểm chứng và an toàn cho cá.</li>
+                        <li><strong>Quản Lý Môi Trường Nước:</strong> Chất lượng nước là yếu tố quan trọng trong việc điều trị bệnh nhiễm khuẩn. Chúng tôi tư vấn và hỗ trợ chủ nuôi trong việc duy trì độ pH, nhiệt độ và mức oxy phù hợp trong nước, giúp cá có môi trường phục hồi lý tưởng.</li>
+                        <li><strong>Theo Dõi Sau Điều Trị:</strong> Sau khi hoàn thành liệu trình, chúng tôi tiếp tục theo dõi tình trạng sức khỏe của cá Koi để đảm bảo bệnh không tái phát và cá hồi phục hoàn toàn. Quá trình theo dõi này cũng bao gồm các tư vấn về chế độ ăn uống và chăm sóc hằng ngày.</li>
+                    </ul>
+
+                    <h3 class="text-secondary">Lợi Ích Khi Sử Dụng Dịch Vụ Điều Trị Bệnh Nhiễm Khuẩn Của Chúng Tôi</h3>
+                    <ul class="mb-4">
+                        <li><strong>Chuyên Gia Tận Tâm:</strong> Đội ngũ bác sĩ và chuyên gia thú y của chúng tôi có kinh nghiệm phong phú trong việc điều trị các bệnh nhiễm khuẩn ở cá Koi, đảm bảo cá của bạn được điều trị một cách an toàn và hiệu quả nhất.</li>
+                        <li><strong>Phác Đồ Điều Trị Tối Ưu:</strong> Chúng tôi áp dụng các phác đồ điều trị tiên tiến và sử dụng các loại thuốc đặc trị, giúp tiêu diệt vi khuẩn mà không gây ảnh hưởng xấu đến cá và môi trường sống trong hồ.</li>
+                        <li><strong>Hỗ Trợ Sau Điều Trị:</strong> Sau khi cá hồi phục, chúng tôi sẽ cung cấp các hướng dẫn cụ thể về chế độ chăm sóc và cách phòng ngừa bệnh tái phát, giúp cá Koi duy trì sức khỏe lâu dài.</li>
+                    </ul>
+
+                    <h3 class="text-secondary">Kết Luận</h3>
+                    <p class="mb-4">Với đội ngũ chuyên gia tận tâm, quy trình điều trị chuyên nghiệp và phác đồ điều trị hiện đại, trung tâm thú y của chúng tôi là lựa chọn hàng đầu cho các chủ nuôi muốn bảo vệ sức khỏe cho cá Koi. Dịch vụ điều trị bệnh nhiễm khuẩn của chúng tôi cam kết mang lại giải pháp toàn diện và an toàn, giúp cá Koi phục hồi nhanh chóng và duy trì sức khỏe tốt nhất.</p>
+
+                    <div class="text-center mt-5">
+                        <a class="btn btn-primary rounded-pill py-3 px-5" href="contact.html">Liên hệ với chúng tôi để biết thêm chi tiết</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Phần Điều Trị Bệnh Nhiễm Khuẩn Cho Cá Koi End -->
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-light mb-4">Địa Chỉ</h5>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i> Số 123, Đường ABC, Thành Phố Hồ Chí Minh, Việt Nam</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social rounded-circle" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social rounded-circle" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social rounded-circle" href=""><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social rounded-circle" href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-light mb-4">Dịch Vụ</h5>
+                    <a class="btn btn-link" href="">Chăm sóc sức khỏe cá Koi</a>
+                    <a class="btn btn-link" href="">Điều trị bệnh ký sinh trùng</a>
+                    <a class="btn btn-link" href="">Tư vấn dinh dưỡng cho cá Koi</a>
+                    <a class="btn btn-link" href="">Phẫu thuật thú y cho cá Koi</a>
+                    <a class="btn btn-link" href="">Phòng thí nghiệm kiểm tra sức khỏe cá Koi</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-light mb-4">Liên Kết </h5>
+                    <a class="btn btn-link" href="">Về chúng tôi</a>
+                    <a class="btn btn-link" href=""> Liên hệ</a>
+                    <a class="btn btn-link" href=""> Dịch vụ của chúng tôi</a>
+                    <a class="btn btn-link" href="">Điều khoản & Điều kiện</a>
+                    <a class="btn btn-link" href="">Hỗ trợ khách hàng</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-light mb-4">Đăng Ký Nhận Tin</h5>
+                    <p>Nhận thông tin mới nhất về chăm sóc và điều trị cá Koi.</p>
+                    <div class="position-relative mx-auto" style="max-width: 400px;">
+                        <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Nhập email của bạn:">
+                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Đăng ký</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#"> Dịch Vụ Thú Y Cá Koi</a>, All Right Reserved.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                        Designed By <a class="border-bottom" href="">HTML Codex</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

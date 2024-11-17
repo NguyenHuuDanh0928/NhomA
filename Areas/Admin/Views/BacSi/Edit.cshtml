@@ -1,0 +1,46 @@
+﻿@model DichVuThuYService.Datas.BacSiThuY
+
+@{
+    ViewData["Title"] = "Chỉnh sửa Bác sĩ";
+     Layout = null;
+}
+<head>
+    <link rel="stylesheet" href="~/css/edit_bacsi.css" />
+</head>
+
+<div class="container">
+    <h2>Chỉnh sửa Bác sĩ</h2>
+    <form action="@Url.Action("Edit", "BacSi", new { area = "Admin" })" method="post">
+        @Html.AntiForgeryToken()
+        <input type="hidden" name="Id" value="@Model.Id" />
+
+        <div class="form-group">
+            <label for="TenBacSi" class="control-label">@Html.DisplayNameFor(model => model.TenBacSi)</label>
+            <input type="text" name="TenBacSi" id="TenBacSi" class="form-control" value="@Model.TenBacSi" />
+            <span class="text-danger">@Html.ValidationMessageFor(model => model.TenBacSi)</span>
+        </div>
+
+        <div class="form-group">
+            <label for="ChuyenMon" class="control-label">@Html.DisplayNameFor(model => model.ChuyenMon)</label>
+            <input type="text" name="ChuyenMon" id="ChuyenMon" class="form-control" value="@Model.ChuyenMon" />
+            <span class="text-danger">@Html.ValidationMessageFor(model => model.ChuyenMon)</span>
+        </div>
+
+        <div class="form-group">
+            <label for="SoDienThoai" class="control-label">@Html.DisplayNameFor(model => model.SoDienThoai)</label>
+            <input type="text" name="SoDienThoai" id="SoDienThoai" class="form-control" value="@Model.SoDienThoai" />
+            <span class="text-danger">@Html.ValidationMessageFor(model => model.SoDienThoai)</span>
+        </div>
+
+        <div class="form-group">
+            <label for="Email" class="control-label">@Html.DisplayNameFor(model => model.Email)</label>
+            <input type="text" name="Email" id="Email" class="form-control" value="@Model.Email" />
+            <span class="text-danger">@Html.ValidationMessageFor(model => model.Email)</span>
+        </div>
+
+        <div class="buttons">
+            <button type="submit" class="save-btn">Lưu thay đổi</button>
+            <a href="@Url.Action("Index", "BacSi", new { area = "Admin" })" class="cancel-btn">Hủy</a>
+        </div>
+    </form>
+</div>

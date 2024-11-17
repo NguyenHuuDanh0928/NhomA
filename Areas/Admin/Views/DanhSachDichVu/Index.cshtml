@@ -1,0 +1,39 @@
+﻿@model IEnumerable<DichVuThuYService.Datas.DichVu>
+
+@{
+    ViewData["Title"] = "Danh sách dịch vụ";
+    Layout = "~/Areas/Admin/Views/Shared/LayoutAdmin.cshtml";
+}
+
+<h1>Danh sách dịch vụ</h1>
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.TenDichVu)</th>
+            <th>@Html.DisplayNameFor(model => model.MoTa)</th>
+            <th>@Html.DisplayNameFor(model => model.Gia)</th>
+            <th>@Html.DisplayNameFor(model => model.ChiPhiDiChuyen)</th>
+            <th>Thao tác</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.TenDichVu)</td>
+                <td>@Html.DisplayFor(modelItem => item.MoTa)</td>
+                <td>@Html.DisplayFor(modelItem => item.Gia)</td>
+                <td>@Html.DisplayFor(modelItem => item.ChiPhiDiChuyen)</td>
+                <td>
+
+                    <a href="@Url.Action("Edit", "DanhSachDichVu", new { area = "Admin", id = item.Id })" class="btn btn-warning">Sửa</a>
+                    <a href="@Url.Action("Details", "DanhSachDichVu", new { area = "Admin", id = item.Id })" class="btn btn-info">Chi tiết</a>
+                    <a href="@Url.Action("Delete", "DanhSachDichVu", new { area = "Admin", id = item.Id })" class="btn btn-danger">Xóa</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,45 @@
+﻿@model DichVuThuYService.Datas.LichHen
+
+@{
+    ViewData["Title"] = "Phê Duyệt Lịch Hẹn";
+    Layout = "~/Areas/Admin/Views/Shared/LayoutAdmin.cshtml";
+}
+
+<h2>Phê Duyệt Lịch Hẹn</h2>
+
+@if (TempData["Error"] != null)
+{
+        <div class="alert alert-danger">
+        @TempData["Error"]
+        </div>
+}
+else if (TempData["Message"] != null)
+{
+        <div class="alert alert-success">
+        @TempData["Message"]
+        </div>
+}
+
+<div class="card mt-3">
+    <div class="card-header">
+        Thông tin chi tiết Lịch Hẹn
+    </div>
+    <div class="card-body">
+        <p><strong>ID Lịch Hẹn:</strong> @Model.Id</p>
+        <p><strong>Khách Hàng:</strong> @Model.KhachHang?.TenKhachHang ?? "Không xác định"</p>
+        <p><strong>Bác Sĩ:</strong> @Model.BacSiThuY?.TenBacSi ?? "Không xác định"</p>
+        <p><strong>Dịch Vụ:</strong> @Model.DichVu?.TenDichVu ?? "Không xác định"</p>
+        <p><strong>Thời Gian:</strong> @Model.ThoiGian.ToString("dd/MM/yyyy HH:mm")</p>
+        <p><strong>Địa Điểm:</strong> @Model.DiaDiem</p>
+        <p><strong>Trạng Thái:</strong> @Model.TrangThai</p>
+    </div>
+</div>
+
+<form asp-action="ApproveConfirm" asp-route-id="@Model.Id" method="post">
+    @Html.AntiForgeryToken() <!-- Automatically adds the anti-forgery token -->
+    <button type="submit" class="btn btn-success mt-3">Xác Nhận Phê Duyệt</button>
+</form>
+
+<div class="mt-4">
+    <a asp-action="Index" asp-controller="AdminLichHen" asp-area="Admin" class="btn btn-primary">Quay lại danh sách lịch hẹn</a>
+</div>

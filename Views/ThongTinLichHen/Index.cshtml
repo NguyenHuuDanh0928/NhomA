@@ -1,0 +1,37 @@
+﻿@model IEnumerable<DichVuThuYRepository.ViewModel.ThongTinLichHenViewModel>
+
+@{
+    Layout = ViewData["Layout"] as string ?? "~/Views/Shared/_Layout.cshtml"; // Layout mặc định nếu không có _LayoutProfile.cshtml
+}
+
+<h2>Thông Tin Lịch Hẹn</h2>
+@if (Model.Any())
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Bác Sĩ</th>
+                <th>Dịch Vụ</th>
+                <th>Thời Gian</th>
+                <th>Địa Điểm</th>
+                <th>Trạng Thái</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.TenBacSi</td>
+                    <td>@item.TenDichVu</td>
+                    <td>@item.ThoiGian.ToString("dd/MM/yyyy HH:mm")</td>
+                    <td>@item.DiaDiem</td>
+                    <td>@item.TrangThai</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>Không có lịch hẹn nào.</p>
+}

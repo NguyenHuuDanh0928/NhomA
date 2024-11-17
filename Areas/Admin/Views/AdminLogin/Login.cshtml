@@ -1,0 +1,28 @@
+﻿@{
+    Layout = "~/Areas/Admin/Views/Shared/LoginLayout.cshtml";
+    ViewData["Title"] = "Admin Login";
+}
+
+<form method="post">
+    <h3>Đăng nhập</h3>
+
+    <label for="username">Tên đăng nhập:</label>
+    <input type="text" id="username" name="username" required />
+
+    <label for="password">Mật khẩu:</label>
+    <input type="password" id="password" name="password" required />
+
+    <button type="submit">Đăng nhập</button>
+
+    <div class="extra-options">
+        <a href="/Admin/ForgotPassword">Quên mật khẩu?</a>
+        <div class="remember-me">
+            <input type="checkbox" id="rememberMe" name="rememberMe" />
+            <label for="rememberMe">Ghi nhớ đăng nhập</label>
+        </div>
+    </div>
+
+    <p class="terms">
+        Bằng cách đăng nhập, bạn đồng ý với <a href="/Terms">Điều khoản dịch vụ</a> và <a href="/Privacy">Chính sách bảo mật</a> của chúng tôi.
+    </p>
+</form>

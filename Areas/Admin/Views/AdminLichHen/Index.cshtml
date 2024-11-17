@@ -1,0 +1,60 @@
+﻿@model IEnumerable<DichVuThuYService.Datas.LichHen>
+
+
+@{
+     ViewData["Title"] = "Danh sách Lịch Hẹn";
+    Layout = "~/Areas/Admin/Views/Shared/LayoutAdmin.cshtml";
+}
+
+<h2>Danh sách Lịch Hẹn</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Khách Hàng</th>
+            <th>Bác Sĩ</th>
+            <th>Dịch Vụ</th>
+            <th>Thời Gian</th>
+            <th>Địa Điểm</th>
+            <th>Trạng Thái</th>
+            <th>Thao Tác</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var lichHen in Model)
+        {
+                <tr>
+                    <td>@lichHen.Id</td>
+                    <td>@lichHen.KhachHangId</td>
+                    <td>@lichHen.BacSiThuYId</td>
+                    <td>@lichHen.DichVuId</td>
+                    <td>@lichHen.ThoiGian.ToString("dd/MM/yyyy HH:mm")</td>
+                    <td>@lichHen.DiaDiem</td>
+                    <td>
+                    @if (lichHen.TrangThai == "Chưa duyệt")
+                    {
+                                <span>Chưa duyệt</span>
+                    }
+                    else
+                    {
+                                <span>Đã xác nhận</span>
+                    }
+                    </td>
+                    <td>
+                    @if (lichHen.TrangThai == "Chưa duyệt")
+                    {
+                                <form asp-action="Approve" asp-route-id="@lichHen.Id" method="post">
+                            @Html.AntiForgeryToken()
+                                    <button type="submit" class="btn btn-success btn-sm" onclick="return confirm('Bạn có chắc chắn muốn phê duyệt lịch hẹn này?');">Phê Duyệt</button>
+                                </form>
+                    }
+                    else
+                    {
+                                <span class="text-success">Đã xác nhận</span>
+                    }
+                    </td>
+                </tr>
+        }
+    </tbody>
+</table>

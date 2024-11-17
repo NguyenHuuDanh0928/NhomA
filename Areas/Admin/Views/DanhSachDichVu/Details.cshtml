@@ -1,0 +1,42 @@
+﻿@model DichVuThuYService.Datas.DichVu
+
+@{
+    ViewData["Title"] = "Chi tiết Dịch Vụ";
+    Layout = null;
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/deleteDichVu.css" />
+</head>
+
+<div class="container">
+    <h2>Chi tiết Dịch Vụ</h2>
+    <form>
+        <input type="hidden" name="Id" value="@Model.Id" />
+
+        <div class="form-group">
+            <label for="TenDichVu" class="control-label">@Html.DisplayNameFor(model => model.TenDichVu)</label>
+            <input type="text" id="TenDichVu" class="form-control" value="@Model.TenDichVu" readonly />
+        </div>
+
+        <div class="form-group">
+            <label for="MoTa" class="control-label">@Html.DisplayNameFor(model => model.MoTa)</label>
+            <input type="text" id="MoTa" class="form-control" value="@Model.MoTa" readonly />
+        </div>
+
+        <div class="form-group">
+            <label for="Gia" class="control-label">@Html.DisplayNameFor(model => model.Gia)</label>
+            <input type="text" id="Gia" class="form-control" value="@Model.Gia" readonly />
+        </div>
+
+        <div class="form-group">
+            <label for="ChiPhiDiChuyen" class="control-label">@Html.DisplayNameFor(model => model.ChiPhiDiChuyen)</label>
+            <input type="text" id="ChiPhiDiChuyen" class="form-control" value="@Model.ChiPhiDiChuyen" readonly />
+        </div>
+
+        <div class="buttons">
+            <a href="@Url.Action("Edit", "DanhSachDichVu", new { area = "Admin", id = Model.Id })" class="btn btn-primary">Sửa</a>
+            <a href="@Url.Action("Index", "DanhSachDichVu", new { area = "Admin" })" class="btn btn-secondary">Quay lại danh sách</a>
+        </div>
+    </form>
+</div>

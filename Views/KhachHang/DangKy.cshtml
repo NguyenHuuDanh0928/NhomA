@@ -1,0 +1,85 @@
+﻿@model DichVuThuYRepository.ViewModel.RegisterVm
+
+@{
+    Layout = "~/Views/Shared/_LayoutDangKy.cshtml";  // Sử dụng layout riêng cho trang đăng ký
+    ViewData["Title"] = "Đăng ký";
+}
+
+<div class="container-fluid py-5">
+    <div class="container py-5">
+        <h1 class="mb-4">Đăng ký Thành viên</h1>
+        <form asp-action="DangKy">
+            <!-- Bỏ asp-validation-summary để không hiển thị lỗi tổng hợp -->
+            <div class="row">
+                <div class="col-md-12 col-lg-6">
+                    <div class="form-item w-100">
+                        <label asp-for="MaKH" class="form-label my-3">Mã Khách Hàng</label><sup>*</sup>
+                        <input asp-for="MaKH" class="form-control">
+                        <span asp-validation-for="MaKH" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="col-md-12 col-lg-6">
+                    <label asp-for="MatKhau" class="form-label my-3">Mật Khẩu</label><sup>*</sup>
+                    <input asp-for="MatKhau" type="password" class="form-control">
+                    <span asp-validation-for="MatKhau" class="text-danger"></span>
+                </div>
+
+                <div class="form-item">
+                    <label asp-for="HoTen" class="form-label my-3">Họ Tên</label><sup>*</sup>
+                    <input asp-for="HoTen" class="form-control">
+                    <span asp-validation-for="HoTen" class="text-danger"></span>
+                </div>
+
+                <div class="form-check my-3">
+                    <label asp-for="GioiTinh" class="form-label my-3">Giới Tính</label>
+                    @foreach (var gender in Enum.GetValues(typeof(DichVuThuYRepository.ViewModel.RegisterVm.GioiTinhEnum)))
+                    {
+                        <div class="form-check">
+                            <input asp-for="GioiTinh" class="form-check-input" type="radio" value="@gender" id="@gender" />
+                            <label class="form-check-label" for="@gender">@gender</label>
+                        </div>
+                    }
+                    <span asp-validation-for="GioiTinh" class="text-danger"></span>
+                </div>
+
+                <div class="col-md-12 col-lg-6">
+                    <label asp-for="GhiChu" class="form-label my-3">Loại Khách Hàng</label><sup>*</sup>
+                    <select asp-for="GhiChu" class="form-control" asp-items="Html.GetEnumSelectList<DichVuThuYRepository.ViewModel.RegisterVm.LoaiKhachHangEnum>()">
+                        <option value="">-- Chọn loại khách hàng --</option>
+                    </select>
+                    <span asp-validation-for="GhiChu" class="text-danger"></span>
+                </div>
+
+             <div class="form-item">
+    <label asp-for="NgaySinh" class="form-label my-3">Ngày Sinh</label>
+    <input asp-for="NgaySinh" type="date" class="form-control" />
+    <span asp-validation-for="NgaySinh" class="text-danger"></span>
+</div>
+
+
+                <div class="form-item">
+                    <label asp-for="DiaChi" class="form-label my-3">Địa Chỉ</label><sup>*</sup>
+                    <input asp-for="DiaChi" class="form-control">
+                    <span asp-validation-for="DiaChi" class="text-danger"></span>
+                </div>
+
+                <div class="form-item">
+                    <label asp-for="SoDienThoai" class="form-label my-3">Số Điện Thoại</label><sup>*</sup>
+                    <input asp-for="SoDienThoai" class="form-control">
+                    <span asp-validation-for="SoDienThoai" class="text-danger"></span>
+                </div>
+
+                <div class="form-item">
+                    <label asp-for="Email" class="form-label my-3">Email</label><sup>*</sup>
+                    <input asp-for="Email" class="form-control">
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="row g-4 text-center align-items-center justify-content-center pt-4">
+                <button type="submit" class="btn border-secondary py-3 px-4 text-uppercase w-100 text-primary">Đăng ký</button>
+            </div>
+        </form>
+    </div>
+</div>
