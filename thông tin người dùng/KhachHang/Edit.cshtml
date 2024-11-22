@@ -1,0 +1,77 @@
+﻿@model DichVuThuYService.Datas.KhachHang
+
+@{
+    ViewData["Title"] = "Chỉnh Sửa Khách Hàng";
+    Layout = null;
+    }
+<head>
+    <link rel="stylesheet" href="~/css/editKhachHang.css" />
+</head>
+
+
+<div class="container">
+    <h2>Chỉnh sửa Khách Hàng</h2>
+    <form action="@Url.Action("Edit", "KhachHang", new { area = "Admin" })" method="post">
+        @Html.AntiForgeryToken()
+        <input type="hidden" name="Id" value="@Model.Id" />
+
+    
+    <!-- Tên Khách Hàng -->
+    <div class="form-group">
+        <label for="TenKhachHang" class="control-label">@Html.DisplayNameFor(model => model.TenKhachHang)</label>
+        <input type ="text" name="TenKhachHang" id="TenKhachHang " class="form-control" value="@Model.TenKhachHang" />
+        <span class="text-danger">@Html.ValidationMessageFor(model => model.TenKhachHang)</span>
+    </div>
+
+        <div class="form-group">
+            <label for="MatKhau" class="control-label">@Html.DisplayNameFor(model => model.Matkhau)</label>
+            <input type="text" name="MatKhau" id="MatKhau " class="form-control" value="@Model.Matkhau" />
+            <span class="text-danger">@Html.ValidationMessageFor(model => model.Matkhau)</span>
+        </div>
+
+        <div class="form-group">
+            <label for="SoDienThoai" class="control-label">@Html.DisplayNameFor(model => model.SoDienThoai)</label>
+            <input type="text" name="SoDienThoai" id="SoDienThoai " class="form-control" value="@Model.SoDienThoai" />
+            <span class="text-danger">@Html.ValidationMessageFor(model => model.SoDienThoai)</span>
+        </div>
+
+
+        <div class="form-group">
+            <label for="DiaChi" class="control-label">@Html.DisplayNameFor(model => model.DiaChi)</label>
+            <input type="text" name="DiaChi" id="DiaChi " class="form-control" value="@Model.DiaChi" />
+            <span class="text-danger">@Html.ValidationMessageFor(model => model.DiaChi)</span>
+        </div>
+
+        <div class="form-group">
+            <label for="Email" class="control-label">@Html.DisplayNameFor(model => model.Email)</label>
+            <input type="text" name="Email" id="Email" class="form-control" value="@Model.Email" />
+            <span class="text-danger">@Html.ValidationMessageFor(model => model.Email)</span>
+        </div>
+
+        <div class="form-group">
+            <label for="GhiChu" class="control-label">@Html.DisplayNameFor(model => model.GhiChu)</label>
+            <input type="text" name="GhiChu" id="GhiChu" class="form-control" value="@Model.GhiChu" />
+            <span class="text-danger">@Html.ValidationMessageFor(model => model.GhiChu)</span>
+        </div>
+
+        <div class="form-group">
+            <label for="NgaySinh" class="control-label">@Html.DisplayNameFor(model => model.NgaySinh)</label>
+            <input type="date" name="NgaySinh" id="NgaySinh" class="form-control" value="@Model.NgaySinh" />
+            <span class="text-danger">@Html.ValidationMessageFor(model => model.NgaySinh)</span>
+        </div>
+
+    <div class="form-group">
+        <label asp-for="GioiTinh" class="control-label">@Html.DisplayNameFor(model => model.GioiTinh)</label>
+        <select asp-for="GioiTinh" class="form-control">
+            <option value="true" @(Model.GioiTinh ? "selected" : "")>Nam</option>
+            <option value="false" @(!Model.GioiTinh ? "selected" : "")>Nữ</option>
+        </select>
+        <span asp-validation-for="GioiTinh" class="text-danger"></span>
+    </div>
+
+        <div class="buttons">
+            <button type="submit" class="save-btn">Lưu thay đổi</button>
+            <a href="@Url.Action("Index", "BacSi", new { area = "Admin" })" class="cancel-btn">Hủy</a>
+        </div>
+    </form>
+</div>

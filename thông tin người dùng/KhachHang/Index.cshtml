@@ -1,0 +1,65 @@
+﻿@model IEnumerable<DichVuThuYService.Datas.KhachHang>
+
+@{
+    ViewData["Title"] = "Danh sách Khách Hàng";
+    Layout = "~/Areas/Admin/Views/Shared/LayoutAdmin.cshtml";
+}
+
+<h1>Danh sách Khách Hàng</h1>
+
+@if (TempData["SuccessMessage"] != null)
+{
+        <div class="alert alert-success">
+        @TempData["SuccessMessage"]
+        </div>
+}
+
+<form method="get">
+    <input type="text" name="keyword" value="@ViewData["Keyword"]" placeholder="Tìm kiếm theo tên hoặc số điện thoại" />
+    <button type="submit">Tìm kiếm</button>
+</form>
+
+<table class="table">
+    <thead>
+        <tr class=" table-warning"">
+            <th>@Html.DisplayNameFor(model => model.FirstOrDefault().TenKhachHang)</th>
+            <th>@Html.DisplayNameFor(model => model.FirstOrDefault().SoDienThoai)</th>
+            <th>@Html.DisplayNameFor(model => model.FirstOrDefault().Email)</th>
+            <th>@Html.DisplayNameFor(model => model.FirstOrDefault().DiaChi)</th>
+            <th>Thao tác</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+                <tr class=" table-success">
+                    <td>@Html.DisplayFor(modelItem => item.TenKhachHang)</td>
+
+                    <td>@Html.DisplayFor(modelItem => item.SoDienThoai)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Email)</td>
+                    <td>@Html.DisplayFor(modelItem => item.DiaChi)</td>
+                    <td>
+                        <a href="@Url.Action("Edit", "KhachHang", new { area = "Admin", id = item.Id })" class="btn btn-warning">Sửa</a>
+                        <a href="@Url.Action("Details", "KhachHang", new { area = "Admin", id = item.Id })" class="btn btn-info">Chi tiết</a>
+                        <a href="@Url.Action("Delete", "KhachHang", new { area = "Admin", id = item.Id })" class="btn btn-danger">Xóa</a>
+                    </td>
+                </tr>
+        }
+    </tbody>
+</table>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var newCustomerId = '@TempData["NewCustomerId"]';
+        if (newCustomerId) {
+            var newCustomerRow = document.getElementById("customer-" + newCustomerId);
+            if (newCustomerRow) {
+                newCustomerRow.scrollIntoView({ behavior: "smooth", block: "center" });
+                newCustomerRow.style.backgroundColor = "#e0f7fa"; // tô màu nền để làm nổi bật
+                setTimeout(() => {
+                    newCustomerRow.style.backgroundColor = ""; // xóa màu nền sau 3 giây
+                }, 3000);
+            }
+        }
+    });
+</script>

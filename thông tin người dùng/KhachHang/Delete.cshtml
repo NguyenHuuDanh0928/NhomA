@@ -1,0 +1,63 @@
+﻿@model DichVuThuYService.Datas.KhachHang
+
+@{
+    ViewData["Title"] = "Xóa Khách Hàng";
+    Layout = null;
+}
+<head>
+    <link rel="stylesheet" href="~/css/editKhachHang.css" />
+</head>
+
+
+<div class="container">
+    <h2>Xóa Khách Hàng</h2>
+    <form asp-action="DeleteKhachHangConfirmed" asp-route-id="@Model.Id" method="post">
+        @Html.AntiForgeryToken()
+        <input type="hidden" asp-for="Id" />
+
+        <div class="form-group">
+            <label asp-for="TenKhachHang" class="control-label">@Html.DisplayNameFor(model => model.TenKhachHang)</label>
+            <p>@Html.DisplayFor(model => model.TenKhachHang)</p>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="MatKhau" class="control-label">@Html.DisplayNameFor(model => model.Matkhau)</label>
+            <p>@Html.DisplayFor(model => model.Matkhau)</p>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="SoDienThoai" class="control-label">@Html.DisplayNameFor(model => model.SoDienThoai)</label>
+            <p>@Html.DisplayFor(model => model.SoDienThoai)</p>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Email" class="control-label">@Html.DisplayNameFor(model => model.Email)</label>
+            <p>@Html.DisplayFor(model => model.Email)</p>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="DiaChi" class="control-label">@Html.DisplayNameFor(model => model.DiaChi)</label>
+            <p>@Html.DisplayFor(model => model.DiaChi)</p>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="GhiChu" class="control-label">@Html.DisplayNameFor(model => model.GhiChu)</label>
+            <p>@Html.DisplayFor(model => model.GhiChu)</p>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="NgaySinh" class="control-label">@Html.DisplayNameFor(model => model.NgaySinh)</label>
+            <p>@Html.DisplayFor(model => model.NgaySinh)</p>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="GioiTinh" class="control-label">@Html.DisplayNameFor(model => model.GioiTinh)</label>
+            <p>@Html.DisplayFor(model => model.GioiTinh)</p>
+        </div>
+
+        <div class="buttons">
+            <button type="submit" class="btn btn-danger">Xóa</button>
+            <a href="@Url.Action("Index", "KhachHang", new { area = "Admin" })" class="btn btn-secondary">Hủy</a>
+        </div>
+    </form>
+</div>

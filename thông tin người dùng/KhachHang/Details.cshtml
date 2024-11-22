@@ -1,0 +1,58 @@
+﻿@model DichVuThuYService.Datas.KhachHang
+
+@{
+    ViewData["Title"] = "Chi Tiết Khách Hàng";
+    Layout = null;
+}
+<head>
+    <link rel="stylesheet" href="~/css/editKhachHang.css" />
+</head>
+
+<div class="container">
+    <h2>Chi tiết Khách Hàng</h2>
+    <form>
+        <input type="hidden" name="Id" value="@Model.Id" />
+
+        <div class="form-group">
+            <label for="TenKhachHang" class="control-label">@Html.DisplayNameFor(model => model.TenKhachHang)</label>
+            <input type="text" id="TenKhachHang" class="form-control" value="@Model.TenKhachHang" readonly />
+        </div>
+        <div class="form-group">
+            <label for="SoDienThoai" class="control-label">@Html.DisplayNameFor(model => model.SoDienThoai)</label>
+            <input type="text" id="SoDienThoai" class="form-control" value="@Model.SoDienThoai" readonly />
+        </div>
+
+        <div class="form-group">
+            <label for="Email" class="control-label">@Html.DisplayNameFor(model => model.Email)</label>
+            <input type="text" id="Email" class="form-control" value="@Model.Email" readonly />
+        </div>
+        <div class="form-group">
+            <label for="DiaChi" class="control-label">@Html.DisplayNameFor(model => model.DiaChi)</label>
+            <input type="text" id="DiaChi" class="form-control" value="@Model.DiaChi" readonly />
+        </div>
+
+        <div class="form-group">
+            <label for="MatKhau" class="control-label">@Html.DisplayNameFor(model => model.Matkhau)</label>
+            <input type="text" id="MatKhau" class="form-control" value="@Model.Matkhau" readonly />
+        </div>
+
+        <div class="form-group">
+            <label for="NgaySinh" class="control-label">@Html.DisplayNameFor(model => model.NgaySinh)</label>
+            <input type="text" id="NgaySinh" class="form-control" value="@Model.NgaySinh" readonly />
+        </div>
+        <div class="form-group">
+            <label for="GioiTinh" class="control-label">@Html.DisplayNameFor(model => model.GioiTinh)</label>
+            <input type="text" id="GioiTinh" class="form-control" value="@Model.GioiTinh" readonly />
+        </div>
+
+        <div class="form-group">
+            <label for="GhiChu" class="control-label">@Html.DisplayNameFor(model => model.GhiChu)</label>
+            <input type="text" id="GhiChu" class="form-control" value="@Model.GhiChu" readonly />
+        </div>
+
+        <div class="buttons">
+            <a href="@Url.Action("Edit", "KhachHang", new { area = "Admin", id = Model.Id })" class="btn btn-primary">Sửa</a>
+            <a href="@Url.Action("Index", "KhachHang", new { area = "Admin" })" class="btn btn-secondary">Quay lại danh sách</a>
+        </div>
+    </form>
+</div>
