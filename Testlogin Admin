@@ -1,0 +1,69 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+using NUnit.Framework;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+using static System.Net.Mime.MediaTypeNames;
+//test loginadmin
+namespace SeleniumTestAutomation
+{
+	public class SeleniumAutoTest
+    {
+        IWebDriver driver;
+
+        [SetUp]
+        public void SetupTest()
+        {
+            driver = new ChromeDriver();
+            driver.Manage().Window.Maximize();
+        }
+        public void Login(IWebDriver driver)
+        {
+            driver.Navigate().GoToUrl("http://localhost:5120/Admin/AdminLogin/Login");
+            Thread.Sleep(1000);
+            //driver.FindElement(By.Id("loginbtn")).Click();
+
+            driver.FindElement(By.Name("username")).Clear();
+            driver.FindElement(By.Name("username")).SendKeys("");//nhap user name 
+            Thread.Sleep(1000);
+            driver.FindElement(By.Id("password")).Clear();
+            driver.FindElement(By.Id("password")).SendKeys("");//nhap password
+            Thread.Sleep(1000);
+            driver.FindElement(By.Id("loginadmin")).Click();
+
+            Thread.Sleep(2000);
+        }
+        [Test]
+        public void RunTestLogin()
+        {
+            driver.Navigate().GoToUrl("http://localhost:5120/Admin/AdminLogin/Login");
+
+            Thread.Sleep(1000);
+            //driver.FindElement(By.Id("loginbtn")).Click();
+
+            driver.FindElement(By.Name("username")).Clear();
+            driver.FindElement(By.Name("username")).SendKeys("admin");
+            Thread.Sleep(1000);
+            driver.FindElement(By.Id("password")).Clear();
+            driver.FindElement(By.Id("password")).SendKeys("password123");
+            Thread.Sleep(1000);
+            driver.FindElement(By.Id("loginad")).Click();
+
+            Thread.Sleep(2000);
+            driver.Navigate().GoToUrl("http://localhost:5120/Admin");
+
+            Thread.Sleep(1000);
+        }
+        
+        [TearDown]
+        public void CloseTest()
+        {
+            driver.Quit();
+        }
+    }
+}
+
